@@ -1,0 +1,121 @@
+# This is a boilerplate parameters config generated for pipeline 'train_models'
+# using Kedro 0.18.0.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.0/kedro_project_setup/configuration.html#parameters
+
+pcsaft_regression_results_table:
+  plot_figures: false
+  parameter_dfs_smiles_column: "smiles_1"
+  experimental_data_smiles_column: "smiles_1"
+  experimental_data_name_column: "name_1"
+  cutoffs: [null,  100, 10000]
+
+cosmo_pcsaft_regression_results_table:
+  plot_figures: false
+  parameter_dfs_smiles_column: "smiles"
+  experimental_data_smiles_column: "smiles"
+  experimental_data_name_column: "compoundName"
+  cutoffs: [null,  100, 10000]
+  # experimental_temperature_column: "Temperature[K]"
+
+pyg_gnn_pure_comp_sepp_results:
+  results_args:
+    smiles_column: "SMILES"
+    target_columns: ['sigma', 'm', 'epsilon_k', 'mu']
+    num_counterfactuals_to_plot: 10
+    save_dir: data/07_model_output/my_model_id/
+    type_simMol_diffValue_lb_value_diff: 0.2
+    type_diffMol_simValue_ub_value_diff: 0.2
+    type_max_simMol_diffValue_lambda: 0.6
+    type_min_simMol_diffValue_lambda: 0.6
+
+results_table:
+  target_columns: ["m", "sigma",  "epsilon_k" , "epsilonAB"]
+  wandb_project: dl4thermo
+  wandb_entity: ceb-sre
+  split: test
+  rounding: 2
+  model_table_score: rmse
+  plot_figures: true # WARNING: If set to true, pipeline will take a long time to run
+  return_all_data: true
+  thermo_table_wandb_runs:
+    - wandb_run_id: 1d0el5jp
+      name: "RF"
+    # - wandb_run_id: 2q4z8dk6
+    #   name: "RF-LOLO"
+    - wandb_run_id: 1e71dnsl  
+      name: FFN
+    - wandb_run_id: oa9692h9
+      name: MPNN
+    - wandb_run_id: 1cy2bhsl
+      name: D-MPNN
+    # - wandb_run_id: yu6u3vro
+    #   name: MPNN-TL
+  thermo_table_wandb_groups:
+    - wandb_group_id: cv_8bi33j
+      name: "RF"
+    - wandb_group_id: cv_fuilp4
+      name: "D-MPNN"
+    - wandb_group_id: cv_uh9uwg
+      name: "MPNN"
+    - wandb_group_id: cv_ax0vxh
+      name: "FFN"
+    # - wandb_group_id: cv_8a5dzn
+    #   name: "MPNN-TL"
+  # balanced_association_wandb_groups:
+  #   - wandb_group_id: cv_dpfa77
+  #     extra_filters:
+  #       config.balanced_association_sampling: true
+  #     name: "RF-B"
+  #   - wandb_group_id: cv_dpfa77
+  #     extra_filters:
+  #       config.balanced_association_sampling: false
+  #     name: "RF-UB"
+  #   - wandb_group_id: cv_qu9nue
+  #     extra_filters:
+  #       config.balanced_association_sampling: true
+  #     name: "D-MPNN-B"
+  #   - wandb_group_id: cv_qu9nue
+  #     extra_filters:
+  #       config.balanced_association_sampling: false
+  #     name: "D-MPNN-UB"
+  #   - wandb_group_id: cv_1rvdjr
+  #     extra_filters:
+  #       config.balanced_association_sampling: true
+  #     name: "MPNN-B"
+  #   - wandb_group_id: cv_1rvdjr
+  #     extra_filters:
+  #       config.balanced_association_sampling: false
+  #     name: "MPNN-UB"
+  #   - wandb_group_id: cv_u1nhqd
+  #     extra_filters:
+  #       config.balanced_association_sampling: true
+  #     name: "FFN-B"
+  #   - wandb_group_id: cv_u1nhqd
+  #     extra_filters:
+  #       config.balanced_association_sampling: false
+  #     name: "FFN-UB"
+  experimental_data_smiles_column: "smiles_1"
+  parameter_dfs_smiles_column: "smiles_1"
+  dipole_moment_data_smiles_column: "smiles_1"
+
+
+results_table_cosmo_pretrain:
+  target_columns: ["m", "sigma",  "epsilon_k" , "epsilonAB"]
+  wandb_project: dl4thermo
+  wandb_entity: ceb-sre
+  split: test
+  rounding: 2
+  model_table_score: rmse
+  plot_figures: false # WARNING: If set to true, pipeline will take a long time to run
+  thermo_table_wandb_runs:
+    - wandb_run_id: 2q4z8dk6
+      name: "RF-LOLO"
+    - wandb_run_id: 89r35uj8
+      name: MPNN
+    - wandb_run_id: 25eykwp6
+      name: MPNN-TL
+  experimental_data_smiles_column: "smiles_1"
+  parameter_dfs_smiles_column: "smiles_1"
+  dipole_moment_data_smiles_column: "smiles_1"

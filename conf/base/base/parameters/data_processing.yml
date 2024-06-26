@@ -1,0 +1,46 @@
+# This is a boilerplate parameters config generated for pipeline 'data_processing'
+# using Kedro 0.17.7.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.17.7/04_kedro_project_setup/02_configuration.html#parameters
+
+dortmund:
+  smiles_lookup_batch_size: 10
+  smiles_lookup_partition_size: 1000
+  float_columns: ["T", "P", "DEN"]
+  str_columns: ["Component"]
+  int_columns: ["#DDB"]
+  lookup_id_column: "dortmund_id"
+  cas_number_column: "cas_number"
+  dortmund_binary_keep_columns: [ "#DDB1", "#DDB2","#DDB3","#DDB4", "T", "P", "x1", "y1"]
+  dortmund_binary_no_na_columns: ["Component Names"]
+  dortmund_binary_component_id_columns: ["#DDB1", "#DDB2","#DDB3","#DDB4"]
+  dortmund_pure_component_keep_columns: ["Component", "#DDB", "T", "P", "Type", "DEN"]
+  dortmund_pure_component_no_na_columns: ["Component", "#DDB"]
+  dortmund_pure_component_id_column: ["#DDB"]
+  reset_index_after_concat: false
+  pura_db_path: data/02_intermediate/pura.db
+
+dortmund_model_prep:
+  smiles_column: "smiles_1"
+  pressure_column: "P"
+  density_column: "DEN"
+  target_columns: ["T"] # Only want to drop if temperature is missings
+  id_column: "#DDB"
+  bounds:
+    P: [10, 10000] # kPa
+    T: [200, 1000] # K
+  density_bounds: [20, 2000] # kg/m^3
+  max_pressure_for_density: 150 #kPa
+  conformer_generation_batch_size: 24
+  drop_duplicates: false
+
+crc:
+  pura_batch_size: 10
+  pura_db_path: data/02_intermediate/pura.db
+  conformer_generation_batch_size: 24
+  smiles_column: "smiles"
+  id_column: "id"
+  dipole_moment_column: "dipole_moment"
+  filter_low_quality: true
+  

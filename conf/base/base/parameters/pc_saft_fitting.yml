@@ -1,0 +1,66 @@
+# This is a boilerplate parameters config generated for pipeline 'pc_saft_fitting'
+# using Kedro 0.17.7.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.17.7/04_kedro_project_setup/02_configuration.html#parameters
+
+sensitivity_analysis:
+  pcsaft_data_smiles_column: "smiles"
+  experimental_data_smiles_column: "smiles_1"
+  n_samples: 1000
+  batch_size: 24
+
+regress_pcsaft:
+  dipole_model_wandb_run_id: 2fxp6hc0
+  wandb_project: dl4thermo
+  wandb_entity: ceb-sre
+  smiles_column: "smiles_1"
+  status_column: "status_1"
+  ddb_id_column: "#DDB"
+  temperature_column: "T"
+  pressure_column: "P"
+  density_column: "DEN"
+  fix_kab: true
+  fix_dipole_moment: true
+  molecule_lookup_column_name: "#DDB"
+  dipole_moment_column: "dipole_moment"
+  dipole_moment_prediction_batch_size: 100
+  batch_size: 24
+  min_num_density_data: 4
+  min_num_pvap_data: 5
+  pressure_bounds: [10, 10000] # kPa
+  density_bounds: [20, 2000] # kg/m^3
+  temperature_bounds: [200, 1000] # K
+  density_weight: 1.0
+  start_batch: 0
+  max_total_residual: null
+  max_residual: 0.5
+  fit_log_pressure: false
+
+
+regress_cosmo_pcsaft:
+  dipole_model_wandb_run_id: 2fxp6hc0
+  wandb_project: dl4thermo
+  wandb_entity: ceb-sre
+  smiles_column: smiles
+  name_column: compoundName
+  temperature_column: T
+  pressure_column: P
+  density_column: DEN
+  fix_kab: false
+  fix_dipole_moment: true
+  dipole_moment_column: "dipole_moment"
+  dipole_moment_prediction_batch_size: 100
+  batch_size: 24
+  min_num_density_data: 4
+  min_num_pvap_data: 5
+  pressure_bounds: [10, 10000] # kPa
+  density_bounds: [20, 2000] # kg/m^3
+  temperature_bounds: [200, 1000] # K
+  density_weight: 1.0
+  start_batch: 0
+  # The average of the sum of the relative errors
+  # can be maximum 2, so basically 100% error in each 
+  # or some combo that adds up to 200%
+  max_mean_residual: 0.25
+  fit_log_pressure: false

@@ -1,0 +1,860 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+sepp_train_set:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/sepp_train_set.csv
+
+sepp_test_set:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/sepp_test_set.csv
+
+gc_train_set:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/gc_train_set.csv
+
+final_holdout_set:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/final_holdout_set.csv
+
+e2e_holdout_set:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/e2e_holdout_set.csv
+
+loetgering_lin_parameters:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/loetgering_lin_parameters.csv
+
+dortmund.binary:
+  type: PartitionedDataSet
+  path: data/01_raw/DDB_binary
+  filename_suffix: ".csv"
+  dataset: 
+    type: pandas.CSVDataSet
+    load_args:
+      skiprows: [1]
+      on_bad_lines: "skip"
+      encoding: "unicode-escape"
+  layer: raw
+
+dortmund.pure_component:
+  type: PartitionedDataSet
+  path: data/01_raw/DDB_pure_components
+  filename_suffix: ".csv"
+  dataset: 
+    type: pandas.CSVDataSet
+    load_args:
+      skiprows: [0, 1, 3]
+      on_bad_lines: "skip"
+      encoding: "unicode-escape"
+  layer: raw
+
+dortmund.ids_cas:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/ddb_ids_cas.csv
+  load_args:
+    on_bad_lines: "skip"
+    encoding: "unicode-escape"
+  layer: raw
+
+dortmund.imported_binary:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/imported_dortmund_binary.pq
+
+dortmund.imported_pure_component:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/imported_dortmund_pure_component.pq
+
+dortmund.molecule_ids_cas_partitioned:
+  type: IncrementalDataSet
+  dataset: pandas.ParquetDataSet
+  layer: intermediate
+  path: data/02_intermediate/dortmund_molecule_names/
+  checkpoint:
+    filepath: data/02_intermediate/dortmund_smiles/CHECKPOINT
+  filename_suffix: ".pq"
+
+dortmund.smiles_lookup_partitioned:
+  type: dl4thermo.extras.kedro_datasets.checkpoint_dataset.CheckPointDataSet
+  dataset: pandas.ParquetDataSet
+  layer: intermediate
+  checkpoint:
+    filepath: data/02_intermediate/dortmund_smiles/CHECKPOINT
+  path: data/02_intermediate/dortmund_smiles/
+  filename_suffix: ".pq"
+
+dortmund.smiles_lookup_classified:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/smiles_lookup_classified.pq
+
+dortmund.smiles_lookup_classified_merged:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/smiles_lookup_classified_merged.pq
+
+dortmund_base_binary:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/dortmund_base_binary.pq
+
+dortmund_base_pure_component:
+  type: pandas.ParquetDataSet
+  layer: intermediate
+  filepath: data/02_intermediate/dortmund_base_pure_component.pq
+
+dortmund_rdkit_xyz_files:
+  type: PartitionedDataSet
+  layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.atoms_dataset.AtomsDataSet
+  filename_suffix: ".xyz"
+  path: data/05_model_input/dortmund_xyz_files
+
+qm9:
+  type: pandas.CSVDataSet
+  layer: model_input
+  filepath: data/01_raw/qm9.csv
+
+cosmo_rs_calculations.cosmo_base_df_partitions:
+  type: IncrementalDataSet
+  dataset: pandas.CSVDataSet
+  layer: intermediate
+  path: data/02_intermediate/cosmo_rs_inputs/
+  checkpoint:
+    filepath: data/02_intermediate/cosmo_rs_results/CHECKPOINT
+  filename_suffix: ".csv"
+
+cosmo_gammas:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  path: data/01_raw/deep_gamma_data/
+  filename_suffix: ".csv"
+
+cosmo_rs_results:
+  type: dl4thermo.extras.kedro_datasets.checkpoint_dataset.CheckPointDataSet
+  dataset:
+    type: pandas.CSVDataSet
+  layer: intermediate
+  path: data/02_intermediate/cosmo_rs_results/
+  checkpoint:
+    filepath: data/02_intermediate/cosmo_rs_results/CHECKPOINT
+  filename_suffix: ".csv"
+
+cosmo_rs_xyz_files:
+  type: PartitionedDataSet
+  layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.atoms_dataset.AtomsDataSet
+  filename_suffix: ".xyz"
+  path: data/05_model_input/cosmo_rs_xyz_files
+
+xyz_files:
+  type: PartitionedDataSet
+  layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.atoms_dataset.AtomsDataSet
+  filename_suffix: ".xyz"
+  path: data/05_model_input/xyz_files
+
+rdkit_xyz_files:
+  type: PartitionedDataSet
+  layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.atoms_dataset.AtomsDataSet
+  filename_suffix: ".xyz"
+  path: data/05_model_input/rdkit_xyz_files
+
+sepp_pure_parameters_wo_assoc:
+  type: pandas.CSVDataSet
+  layer: model_input
+  filepath: data/03_primary/sepp_pure_component_params_w_o_assoc_valid.csv
+
+fragments:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/01_raw/fragments.txt
+  load_args:
+    sep: "\t"
+    comment: "/"
+    names: ["label", "smarts", "name"]
+
+wikipedia_dipole_moments:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/wikipedia_dipole_moments.csv
+
+crc_dipole_moments:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/crc_dipole_moments.csv
+
+crc_base:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/crc_base.csv
+
+crc_filtered:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/crc_filtered.csv
+
+crc_removed:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/crc_removed.csv
+
+crc_xyz_files: 
+  type: PartitionedDataSet
+  layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.atoms_dataset.AtomsDataSet
+  filename_suffix: ".xyz"
+  path: data/05_model_input/crc_xyz_files
+
+# PC-SAFT emulator
+pcsaft_emulator_critical_points:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/pcsaft_emulator_critical_points.csv
+
+pcsaft_emulator_phase_equilibria:
+  type: pandas.ParquetDataSet
+  filepath: data/01_raw/pcsaft_emulator_vapor_pressures.pq
+
+pcsaft_emulator_pairplot:
+  type: matplotlib.MatplotlibWriter
+  save_args:
+    format: png
+    dpi: 300
+  filepath: data/07_model_output/pcsaft_emulator_pairplot.png
+
+pc_saft_emulator_critical.pc_saft_emulator_split_idx:
+  type: PartitionedDataSet
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/pc_saft_emulator_critical_splits
+  overwrite: true
+
+pc_saft_emulator_critical.critical_points_no_na:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/pcsaft_emulator_critical_points_no_na.csv
+
+pc_saft_emulator_critical.pc_saft_emulator_wandb_run_id:
+  type: text.TextDataSet
+  filepath: data/07_model_output/pcsaft_emulator_critical_temp_wandb_run_id.txt
+
+pc_saft_emulator_pvap_density.pc_saft_emulator_wandb_run_id:
+  type: text.TextDataSet
+  filepath: data/07_model_output/pcsaft_emulator_pvap_density_wandb_run_id.txt
+
+pc_saft_emulator_pvap_density.pc_saft_emulator_split_idx:
+  type: PartitionedDataSet
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/pc_saft_emulator_pvap_density_splits
+  overwrite: true
+
+e2e_pure_data:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/e2e_pure_data.pq
+
+e2e_pure_fps:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filepath: data/05_model_input/e2e_pure_fps.npy
+
+e2e_pure_split_idx:
+  type: PartitionedDataSet
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/e2e_splits
+
+e2e_reduced_split_idx:
+  type: PartitionedDataSet
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/e2e_splits_reduced
+  overwrite: true
+
+e2e_pure_cluster_labels:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filepath: data/05_model_input/e2e_splits/cluster_labels.npy
+
+e2e_pure_cluster_umap:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/e2e_splits/umap_cluster_split.png
+  save_args:
+    format: png
+    dpi: 300
+
+e2e_pure_split_umap:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/e2e_splits
+  filename_suffix: "_umap_cluster_split.png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+e2e_pure_split_functional_groups:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/e2e_splits/pure_components_functional_groups.png
+  save_args:
+    format: png
+    dpi: 300
+
+e2e_pure_pairplot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/e2e_splits/pure_components_pairplot.png
+  save_args:
+    format: png
+    dpi: 300
+
+
+# PCP-SAFT SEPP
+pcp_saft_sepp_pure_parameters:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/03_primary/pcp_saft_sepp_pure_component_params.csv
+
+pcp_saft_sepp_pure_parameters_filtered:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_sepp_filtered.csv
+
+pcp_saft_sepp_pure_parameters_removed_outliers:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_sepp_outliers.csv
+
+pcp_saft_sepp_pure_parameters_split_idx:
+  type: PartitionedDataSet
+  # layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/sepp_splits
+  overwrite: true
+
+pcp_saft_sepp_pure_parameters_cluster_labels:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filepath: data/05_model_input/sepp_splits/cluster_labels.npy
+
+pcp_saft_sepp_pure_fps:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_sepp_pure_fps.npy
+
+pcp_saft_sepp_pure_parameters_cluster_umap:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sepp_splits/umap_cluster_split.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_sepp_pure_parameters_split_umap:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/sepp_splits
+  filename_suffix: "_umap_cluster_split.png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+pcp_saft_sepp_pure_parameters_split_functional_groups:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sepp_splits/pure_components_functional_groups.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_sepp_pure_parameters_pairplot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sepp_splits/pure_components_pairplot.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_sepp_chemprop_wandb_run_id:
+  type: text.TextDataSet
+  # layer: model_output
+  filepath: data/07_model_output/sepp_results/chemprop_wandb_run_id.txt
+
+pcp_saft_sepp_sepp_ffn_wandb_run_id:
+  type: text.TextDataSet
+  # layer: model_output
+  filepath: data/07_model_output/sepp_results/ffn_wandb_run_id.txt
+
+pcp_saft_sepp_sklearn_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/sepp_results/sklearn_wandb_run_id.txt
+
+pcp_saft_sepp_spk_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/sepp_results/spk_wandb_run_id.txt
+
+pcp_saft_sepp_spk_rdkit_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/sepp_results/spk_rdkit_wandb_run_id.txt
+
+pcp_saft_sepp_pyg_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/sepp_results/pyg_wandb_run_id.txt
+  
+spk_mu_sepp_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/sepp_results/spk_mu_sepp_wandb_run_id.txt
+
+# PCP-SAFT Regressed
+dortmund_base_pure_component_filtered:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/dortmund_base_pure_component_filtered.pq
+
+dortmund_dipole_moment_predictions:
+  type: pandas.ParquetDataSet
+  # layer: model_input
+  filepath: data/02_intermediate/dortmund_dipole_moment_predictions.pq
+
+regress_pcsaft.pcp_saft_pure_regression_results:
+  type: PartitionedDataSet
+  dataset: json.JSONDataSet
+  filename_suffix: ".json"
+  path: data/03_primary/pcp_saft_pure_regression_results
+  overwrite: true
+
+pcp_saft_initial_pure_parameters:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/pcp_saft_initial_pure_component_params.pq
+
+pcp_saft_regressed_pure_parameters:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/pcp_saft_regressed_pure_component_params.pq
+
+pcp_saft_regressed_pure_parameters_removed:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_regressed_removed.csv
+
+pcp_saft_regressed_pure_parameters_filtered:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_regressed_filtered.csv
+
+pcp_saft_regressed_pure_parameters_removed_outliers:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_regressed_outliers.csv
+
+pcp_saft_regressed_pure_parameters_split_idx:
+  type: PartitionedDataSet
+  # layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/regressed_splits
+  overwrite: false
+
+pcp_saft_regressed_pure_parameters_cv_split_idx:
+  type: PartitionedDataSet
+  # layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/cv_regressed_splits
+  overwrite: true
+
+pcp_saft_regressed_pure_parameters_cluster_labels:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filepath: data/05_model_input/regressed_splits/cluster_labels.npy
+
+pcp_saft_regressed_pure_fps:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  # layer: model_input
+  filepath: data/05_model_input/pcp_saft_regressed_pure_fps.npy
+
+pcp_saft_regressed_pure_parameters_cluster_umap:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/regressed_splits/umap_cluster_split.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_regressed_pure_parameters_split_umap:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/regressed_splits
+  filename_suffix: "_umap_cluster_split.png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+pcp_saft_regressed_pure_parameters_split_functional_groups:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/regressed_splits/pure_components_functional_groups.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_regressed_pure_parameters_pairplot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/regressed_splits/pure_components_pairplot.png
+  save_args:
+    format: png
+    dpi: 300
+
+pcp_saft_regressed_chemprop_wandb_run_id:
+  type: text.TextDataSet
+  # layer: model_output
+  filepath: data/07_model_output/regressed_results/chemprop_wandb_run_id.txt
+
+pcp_saft_regressed_ffn_wandb_run_id:
+  type: text.TextDataSet
+  # layer: model_output
+  filepath: data/07_model_output/regressed_results/ffn_wandb_run_id.txt
+
+pcp_saft_regressed_sklearn_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/regressed_results/sklearn_wandb_run_id.txt
+
+pcp_saft_regressed_sklearn_wandb_group_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/regressed_results/sklearn_cv_wandb_group_id.txt
+
+pcp_saft_regressed_spk_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/regressed_results/spk_wandb_run_id.txt
+
+pcp_saft_regressed_spk_rdkit_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/regressed_results/spk_rdkit_wandb_run_id.txt
+
+pcp_saft_regressed_pyg_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/regressed_results/pyg_wandb_run_id.txt
+
+# COSMO-RS sigma moments
+sigma_moments_filtered:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/sigma_moments_filtered.csv
+
+sigma_moments_removed_outliers:
+  type: pandas.CSVDataSet
+  # layer: model_input
+  filepath: data/05_model_input/sigma_moments_outliers.csv
+
+sigma_moments_split_idx:
+  type: PartitionedDataSet
+  # layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/sigma_moments_splits
+  overwrite: true
+
+sigma_moments_cluster_labels:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filepath: data/05_model_input/sigma_moments_splits/cluster_labels.npy
+
+sigma_moments_fps:
+  type: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  # layer: model_input
+  filepath: data/05_model_input/sigma_moments_fps.npy
+
+sigma_moments_cluster_umap:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sigma_moments_splits/umap_cluster_split.png
+  save_args:
+    format: png
+    dpi: 300
+
+sigma_moments_split_umap:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/sigma_moments_splits
+  filename_suffix: "_umap_cluster_split.png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+sigma_moments_split_functional_groups:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sigma_moments_splits/pure_components_functional_groups.png
+  save_args:
+    format: png
+    dpi: 300
+
+sigma_moments_pairplot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sigma_moments_splits/pure_components_pairplot.png
+  save_args:
+    format: png
+    dpi: 300
+
+spk_sigma_moments_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/spk_sigma_moments_wandb_run_id.txt
+
+# COSMO-RS pure component pretraining
+cosmo_pure_component:
+  type: pandas.ParquetDataSet
+  filepath: data/03_intermediate/cosmo_pure_component_data.pq
+
+cosmo_pure_component_removed:
+  type: pandas.ParquetDataSet
+  filepath: data/03_intermediate/cosmo_pure_component_data_removed.pq
+
+cosmo_dipole_moment_predictions:
+  type: pandas.ParquetDataSet
+  filepath: data/03_intermediate/cosmo_dipole_moment_predictions.pq
+
+cosmo_painn_dipole_moment_predictions:
+  type: pandas.ParquetDataSet
+  filepath: data/03_intermediate/cosmo_painn_dipole_moment_predictions.pq
+
+regress_cosmo_pcsaft.pcp_saft_pure_cosmo_regression_results:
+  type: PartitionedDataSet
+  dataset: json.JSONDataSet
+  filename_suffix: ".json"
+  path: data/03_primary/pcp_saft_pure_cosmo_regression_results
+  overwrite: true
+
+pcp_saft_cosmo_initial_pure_parameters:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/pcp_saft_cosmo_intial_pure_component_params.pq
+
+pcp_saft_cosmo_regressed_pure_parameters:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/pcp_saft_cosmo_regressed_pure_component_params.pq
+
+pcp_saft_cosmo_regressed_pure_parameters_removed:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/pcp_saft_cosmo_regressed_pure_component_params_removed.pq
+
+pyg_pretrain_cosmo_data_removed:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/pyg_pretrain_cosmo_data_removed.csv
+
+pyg_pretrain_cosmo_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/pyg_pretrain_cosmo_wandb_run_id.txt
+
+pyg_pretrain_cosmo_split_idx:
+  type: PartitionedDataSet
+  # layer: model_input
+  dataset: dl4thermo.extras.kedro_datasets.np_dataset.NumpyDataSet
+  filename_suffix: ".npy"
+  path: data/05_model_input/pyg_pretrain_cosmo_splits
+  overwrite: true
+
+# QM9
+spk_qm9_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/spk_qm9_wandb_run_id.txt
+
+spk_qm9_mu_wandb_run_id:
+  type: text.TextDataSet
+  layer: model_output
+  filepath: data/07_model_output/spk_qm9_mu_wandb_run_id.txt
+
+# Final results
+pvap_sensitivity_analysis_results:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/pvap_sensitivity_analysis.csv
+
+rho_sensitivity_analysis_results:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/rho_sensitivity_analysis.csv
+
+sensitivity_boxplot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/sensitivity_analysis_boxplot.png
+  save_args:
+    format: png
+    dpi: 300
+
+pure_gc_data:
+  type: json.JSONDataSet
+  filepath: data/01_raw/gc_substances.json
+
+sauer2014_homo_segments_gc_data:
+  type: json.JSONDataSet
+  filepath: data/01_raw/sauer2014_homo.json
+
+pcsaft_regression_pure_component_thermo_scores_table:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pcsaft_regression_pure_component_scores.tex
+
+pcsaft_regression_pure_component_thermo_scores:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  path: data/08_reporting/pcsaft_regression_pure_component_scores
+
+pcsaft_regression_pure_component_figures:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/pcsaft_pure_component_regression_figures
+  filename_suffix: ".png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+pcsaft_regression_pure_component_histograms:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/pcsaft_pure_component_regression_histograms
+  filename_suffix: ".png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+  overwrite: true
+    
+
+cosmo_pcsaft_regression_pure_component_thermo_scores_table:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/cosmo_pcsaft_regression_pure_component_scores.tex
+
+cosmo_pcsaft_regression_pure_component_thermo_scores:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  path: data/08_reporting/cosmo_csaft_regression_pure_component_scores
+
+cosmo_pcsaft_regression_pure_component_figures:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/cosmo_pcsaft_pure_component_regression_figures
+  filename_suffix: ".png"
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+parameters_scores_table:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_scores.tex
+
+parameters_scores_table_cosmo:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_scores_cosmo_pretrain.tex
+
+thermo_scores:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  overwrite: true
+  path: data/08_reporting/pure_component_scores
+
+thermo_scores_cosmo:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  overwrite: true
+  path: data/08_reporting/pure_component_scores_cosmo_pretrain
+
+thermo_scores_gc:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  path: data/08_reporting/pure_component_scores_gc
+  overwrite: true
+
+thermo_scores_sepp:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  path: data/08_reporting/pure_component_scores_sepp
+  overwrite: true
+
+feos_predictions_figures:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/feos_predictions/figures
+  filename_suffix: ".png"
+  overwrite: false
+  dataset: 
+    type: matplotlib.MatplotlibWriter
+    save_args:
+      format: png
+      dpi: 300
+
+parity_plot_figures:
+  type: PartitionedDataSet
+  # layer: model_output
+  path: data/08_reporting/parity_plots/
+  filename_suffix: ".png"
+  dataset: 
+    type: dl4thermo.extras.kedro_datasets.svgutils_dataset.SvgUtilsDataset
+    format: png
+
+model_parameter_predictions:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  layer: reporting
+  filename_suffix: ".csv"
+  path: data/08_reporting/model_parameter_predictions
+  overwrite: true
+
+all_data:
+  type: PartitionedDataSet
+  dataset: pandas.ParquetDataSet
+  layer: reporting
+  filename_suffix: ".pq"
+  path: data/08_reporting/model_thermo_predictions
+  overwrite: true
+
+thermo_scores_table:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores.tex
+
+thermo_scores_table_cosmo:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores_cosmo_pretrain.tex
+
+thermo_scores_table_cv:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores_cv.tex
+
+thermo_scores_table_gc:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores_gc.tex
+
+thermo_scores_table_sepp:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores_sepp.tex
+
+thermo_scores_table_balanced:
+  type: text.TextDataSet
+  layer: reporting
+  filepath: data/08_reporting/pure_component_thermo_scores_balanced.tex

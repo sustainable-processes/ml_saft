@@ -1,0 +1,11 @@
+base_config_filepath: "conf/base/parameters/train_models.yml"
+key: pc_saft_emulator_pvap_density.train_args
+pipeline: train_pc_saft_emulator_pvap_density
+num_trials: 4
+params:
+  input_columns:
+    values:
+    - ["m", "sigma", "epsilon_k", "KAB", "epsilonAB", "inverse_Tr"]
+    - ["m", "sigma", "epsilon_k", "mu",  "KAB", "epsilonAB", "inverse_Tr"]
+  auto_lr_find:
+    values: [true, false]

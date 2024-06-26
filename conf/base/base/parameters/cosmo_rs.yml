@@ -1,0 +1,15 @@
+# This is a boilerplate parameters config generated for pipeline 'cosmo_rs'
+# using Kedro 0.18.4.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.4/kedro_project_setup/configuration.html#parameters
+
+cosmo_rs_calculations:
+  partition_size: 24  # batches of 24
+  n_cores: 24 # number of cores on our server
+  timeout: 20 # seconds
+  save_dir: data/02_intermediate/cosmo_rs_files
+  calculate_kwargs:
+    Tmin: 273.15
+    Tmax: 523.15
+    Tstep: 25

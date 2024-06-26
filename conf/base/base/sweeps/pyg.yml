@@ -1,0 +1,76 @@
+base_config_filepath: "conf/base/parameters/train_models.yml"
+key: pyg_regressed_pcp_saft_model.train_args
+pipeline: train_pyg_regressed_model
+num_trials: 100
+params:
+  ### Representation related parameters ###
+  num_convs:
+    values: [1, 2, 3]
+  dim_fingerprint:
+    min: 32
+    max: 350
+    scaling: log
+    type: integer
+  ### Readout related parmeters ###
+  pool_type:
+    values: ["mean", "add"]
+  target_columns:
+    values:
+    - ["m", "sigma",  "epsilon_k", "epsilonAB"]
+    - ["m", "sigma",  "epsilon_k", "epsilonAB", "KAB"]
+    - ["m", "sigma",  "epsilon_k", "epsilonAB", "mu"]
+  ### Training related parameters ###
+  balanced_associating_sampling:
+    values: [true, false]
+  filter_non_associating_inside_loss:
+    values:
+      # Filtering inside loss
+      true:
+        params:
+          filter_non_associating:
+            values: [false]
+        num_trials: 1
+      # Post-hoc filtering
+      false:
+        params:
+          filter_non_associating:
+            values: [true] 
+        num_trials: 1
+  dropout:
+    min: 0.0
+    max: 0.5
+    scaling: linear
+    type: float
+  lr:
+    min: 0.00001
+    max: 0.1
+    scaling: log
+    type: float
+  optimizer: 
+    values: [adam]
+  beta_1:
+    key: optimizer_kwargs
+    min: 0.8
+    max: 0.99
+    scaling: log
+    type: float
+  scheduler:
+    values: [noam]
+  warmup_epochs:
+    key: scheduler_kwargs 
+    min: 1
+    max: 10
+    scaling: linear
+    type: integer
+  max_lr_ratio:
+    key: scheduler_kwargs 
+    min: 2
+    max: 100
+    scaling: linear
+    type: float
+  final_lr_ratio:
+    key: scheduler_kwargs
+    min: 0.1
+    max: 1.0
+    scaling: linear
+    type: float

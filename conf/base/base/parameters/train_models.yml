@@ -1,0 +1,514 @@
+# This is a boilerplate parameters config generated for pipeline 'train_models'
+# using Kedro 0.18.0.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.0/kedro_project_setup/configuration.html#parameters
+
+prepare_sepp_splits:
+  smiles_column: "smiles"
+  conformer_id_lookup_column: "Name"
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  fillna:
+    KAB: 0.0
+    epsilonAB: 0.0
+  fp_bits: 4096
+  outlier_std_devs_cutoff: 3.0
+  outlier_check_columns: ["mu","m", "sigma",  "epsilon_k"]
+  test_size: 0.1
+  valid_size: 0.05
+  drop_duplicates: true
+  dropna: true
+  min_n_atoms: 2
+  umap_before_cluster: false
+  kmeans_kwargs:
+    n_clusters: 4
+    init: "random"
+    n_init: 20
+    random_state: 50
+  plot_top_k_functional_groups: 5
+  cluster_split_umap_kwargs:
+    random_state: 0
+    n_neighbors: 15
+    min_dist: 0.5
+  run_app: false
+  umap_kwargs_app:
+    n_components: 3
+
+prepare_e2e_splits:
+  smiles_column: "smiles_1"
+  conformer_id_lookup_column: "#DDB"
+  outlier_check_columns: []
+  outlier_std_devs_cutoff: 100.0
+  # target_columns: ["Pvap", "rho_l"]
+  target_columns: []
+  fp_bits: 4096
+  valid_size: 0.1
+  umap_before_cluster: false
+  cluster_split_umap_kwargs:
+    random_state: 0
+    n_neighbors: 3
+    min_dist: 0.1
+    disconnection_distance: 2.0
+  min_n_atoms: 2
+  kmeans_kwargs:
+    n_clusters: 3
+    init: "random"
+    n_init: 20
+    random_state: 200
+  plot_top_k_functional_groups: 5
+  umap_kwargs:
+    random_state: 0
+    n_neighbors: 15
+    min_dist: 0.5
+  run_app: false
+  umap_kwargs_app:
+    n_components: 3
+
+prepare_regressed_splits:
+  smiles_column: "smiles_1"
+  conformer_id_lookup_column: "#DDB"
+  target_columns: ["m", "sigma", "epsilon_k", "mu", "KAB", "epsilonAB"]
+  manual_check_column: "manual check"
+  invalid_values:  ["invalid", "invalid/outlier", "invalid/bad data"]
+  fillna:
+    KAB: 0.0
+    epsilonAB: 0.0
+  fp_bits: 2048
+  outlier_std_devs_cutoff: 3.0
+  outlier_check_columns: []
+  drop_duplicates: true
+  dropna: true
+  valid_size: 0.1
+  test_size: 0.1
+  n_folds: 10
+  min_n_atoms: 2
+  umap_before_cluster: true
+  kmeans_kwargs:
+    n_clusters: 3
+    init: "random"
+    n_init: 20
+    random_state: 200
+  plot_top_k_functional_groups: 5
+  umap_kwargs:
+    random_state: 0
+    n_neighbors: 15
+    min_dist: 0.5
+  run_app: false
+  umap_kwargs_app:
+    n_components: 3
+
+prepare_sigma_moments_splits:
+  keep_columns:
+    - "smiles"
+    - "compoundName"
+    - "sigma_moment_1"
+    - "sigma_moment_2" 
+    - "sigma_moment_3"
+    - "sigma_moment_4"
+    - "sigma_moment_5"
+  smiles_column: "smiles"
+  target_columns: ["sigma_moment_1", "sigma_moment_2", "sigma_moment_3", "sigma_moment_4", "sigma_moment_5"]
+  molecule_lookup_column: "compoundName"
+  fillna:
+  outlier_std_devs_cutoff: 3.0
+  outlier_check_columns: []
+  drop_duplicates: true
+  min_n_atoms: 2
+  dropna: true
+  fp_bits: 2048
+  test_size: 0.1
+  valid_size: 0.05
+  umap_before_cluster: false
+  kmeans_kwargs:
+    n_clusters: 4
+    init: "random"
+    n_init: 20
+    random_state: 50
+  plot_top_k_functional_groups: 5
+  umap_kwargs:
+    random_state: 0
+    n_neighbors: 15
+    min_dist: 0.5
+  run_app: false
+  umap_kwargs_app:
+    n_components: 3
+
+pc_saft_data_generation:
+  n_samples: 5000
+
+pc_saft_emulator_critical:
+  valid_size: 0.1
+  test_size: 0.1
+  train_args:
+    type: dl4thermo.pipelines.train_models.models.pcsaft_emulator.PcSaftEmulatorTrainArgs
+    smiles_columns: [""]
+    target_columns: ["log_T_crit", "log_P_crit"]
+    predict_failure: true
+    balanced_failure_sampling: false
+    num_hidden_layers: 2
+    hidden_layer_dims: [48, 24, 12]
+    lr: 0.001
+    classification_cutoff: 0.8
+    data_source: "random"
+    save_dir: "data/07_model_output/pcsaft_emulator"
+    wandb_tags: ["FFN", "PcSaftEmulator", "Tc"]
+
+pc_saft_emulator_pvap_density:
+  valid_size: 0.1
+  test_size: 0.1
+  train_args:
+    type: dl4thermo.pipelines.train_models.models.pcsaft_emulator.PcSaftEmulatorTrainArgs
+    smiles_columns: [""]
+    input_columns: ["m", "sigma", "epsilon_k", "KAB", "epsilonAB", "inverse_Tr"]
+    target_columns: [rho_l_s, rho_v_s, log_Pr]
+    predict_failure: false
+    balanced_failure_sampling: false
+    num_hidden_layers: 2
+    hidden_layer_dims: [48, 24, 12]
+    batch_size: 2500
+    auto_lr_find: true
+    data_source: "random"
+    save_dir: "data/07_model_output/pcsaft_emulator"
+    wandb_tags: ["FFN", "PcSaftEmulator", "Pvap", "Density"]
+
+sklearn_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.sklearn.SklearnTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  save_dir: "data/07_model_output/rf"
+  data_source: "SEPP"
+  wandb_tags: ["RF", "SEPP"]
+
+sklearn_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.sklearn.SklearnTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  save_dir: "data/07_model_output/rf"
+  data_source: "regressed"
+  filter_non_associating: true
+  wandb_tags: ["RF", "Regressed"]
+
+sklearn_cv_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.sklearn.SklearnTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  save_dir: "data/07_model_output/rf"
+  data_source: "regressed"
+  filter_non_associating: true  
+  wandb_tags: ["RF", "Regressed"]
+
+lolo_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.sklearn.SklearnTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns:  ["m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  associating_columns: ["KAB", "epsilonAB"]
+  save_dir: "data/07_model_output/lolo"
+  data_source: "regressed"
+  filter_non_associating: true
+  wandb_tags: ["RF", "Regressed", "LOLO"]
+
+ffn_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.ffn.FFNTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  associating_columns: [ "KAB", "epsilonAB"]
+  filter_non_associating: true
+  data_source: "SEPP"
+  save_dir: "data/07_model_output/ffn"
+  wandb_tags: ["FFN", "SEPP"]
+
+ffn_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.ffn.FFNTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating: false
+  filter_non_associating_inside_loss: true
+  balanced_associating_sampling: true
+  batch_size: 500
+  data_source: "regressed"
+  save_dir: "data/07_model_output/ffn"
+  wandb_tags: ["FFN", "Regressed"]
+
+ffn_cv_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.ffn.FFNTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating: false
+  filter_non_associating_inside_loss: true
+  balanced_associating_sampling: true
+  batch_size: 500
+  data_source: "regressed"
+  save_dir: "data/07_model_output/ffn"
+  wandb_tags: ["FFN", "Regressed SEPP"]
+
+chemprop_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.chemprop.ChempropTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating: true
+  freeze_encoder: false
+  data_source: "SEPP"
+  save_dir: "data/07_model_output/chemprop"
+  wandb_tags: ["Chemprop", "SEPP"]
+
+chemprop_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.chemprop.ChempropTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating_inside_loss: true
+  batch_size: 500
+  num_workers: 0
+  filter_non_associating: false
+  data_source: "regressed"
+  save_dir: "data/07_model_output/chemprop"
+  wandb_tags: ["Chemprop", "Regressed"]
+
+chemprop_cv_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.chemprop.ChempropTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating_inside_loss: true
+  batch_size: 500
+  num_workers: 0
+  filter_non_associating: false
+  data_source: "regressed"
+  save_dir: "data/07_model_output/chemprop"
+  wandb_tags: ["Chemprop", "Regressed"] 
+
+pyg_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.pyg.PyGTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  targets_transformation: ["norm", "norm", "norm", "norm", "norm", "norm"]
+  associating_columns: [ "KAB", "epsilonAB"]
+  filter_non_associating: true
+  data_source: "SEPP"
+  save_dir: 'data/07_model_output/pyg'
+  wandb_tags: ["PyG", "SEPP"]
+
+pyg_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.pyg.PyGTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating: true
+  filter_non_associating_inside_loss: false
+  balanced_associating_sampling: false
+  freeze_normalization: false
+  freeze_encoder: false
+  # wandb_checkpoint_artifact_id: "ceb-sre/dl4thermo/model-3lc8hr8l:v3"
+  data_source: "regressed"
+  epochs: 1000
+  batch_size: 500
+  num_workers: 0
+  num_convs: 2
+  dim_fingerprint: 200
+  pool_type: add
+  lr: 0.0001
+  dropout: 0.2
+  optimizer: adam
+  scheduler: noam
+  scheduler_kwargs:
+    # step_size: 1
+    warmup_epochs: 2
+    max_lr_ratio: 100
+    final_lr: 0.00001
+  save_dir: 'data/07_model_output/pyg'
+  wandb_tags: ["PyG", "Regressed"]
+
+pyg_cv_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.pyg.PyGTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB"]
+  associating_columns: ["epsilonAB"]
+  filter_non_associating: true
+  filter_non_associating_inside_loss: true
+  balanced_associating_sampling: true
+  # freeze_normalization: true
+  # freeze_encoder: true
+  # wandb_checkpoint_artifact_id: "ceb-sre/dl4thermo/model-3lc8hr8l:v3"
+  data_source: "regressed"
+  epochs: 1000
+  batch_size: 500
+  num_workers: 0
+  num_convs: 2
+  dim_fingerprint: 200
+  pool_type: add
+  lr: 0.0001
+  dropout: 0.2
+  optimizer: adam
+  scheduler: noam
+  scheduler_kwargs:
+    # step_size: 1
+    warmup_epochs: 2
+    max_lr_ratio: 100
+    final_lr: 0.00001
+  save_dir: 'data/07_model_output/pyg'
+  wandb_tags: ["PyG", "Regressed"]
+
+pyg_pretrain_cosmo_model:
+  val_size: 0.05
+  test_size: 0.05
+  outlier_std_devs_cutoff: 3.0
+  new_wandb_run_for_zero_shot_eval: true
+  train_args:
+    type: dl4thermo.pipelines.train_models.models.pyg.PyGTrainArgs
+    smiles_columns: ["smiles"]
+    target_columns: ["m", "sigma",  "epsilon_k", "epsilonAB", "KAB"]
+    associating_columns: ["epsilonAB"]
+    filter_non_associating: false
+    filter_non_associating_inside_loss: true
+    balanced_associating_sampling: true
+    data_source: "cosmo-rs"
+    epochs: 500
+    batch_size: 500
+    num_workers: 0
+    num_convs: 2
+    dim_fingerprint: 200
+    pool_type: add
+    lr: 0.001
+    dropout: 0.2
+    optimizer: "adam"
+    # optimizer_kwargs:
+    #   beta_1: 0.
+    scheduler: "noam"
+    scheduler_kwargs:
+      warmup_epochs: 100
+      max_lr: 0.002
+      final_lr: 0.00001
+    overwrite_save_dir: true
+    log_all_models: true
+    save_dir: 'data/07_model_output/pyg'
+    wandb_tags: ["PyG", "Regressed"]
+
+
+spk_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  targets_atomistic_type: ["DipoleMoment", "Atomwise", "Atomwise", "Atomwise", "Atomwise", "Atomwise"]
+  targets_transformation: ["None", "norm", "norm", "norm", "norm", "norm"]
+  use_dipole_vector_representation: true
+  associating_columns: ["KAB", "epsilonAB"]
+  filter_non_associating: true
+  wandb_artifact_name: "spk_sepp_pcp_saft_model"
+  wandb_checkpoint_artifact_id: "ceb-sre/dl4thermo/model-dsaflkj43j:v0"
+  freeze_encoder: false
+  data_source: "SEPP"
+  save_dir: 'data/07_model_output/spk'
+  wandb_tags: ["SEPP", "SPK", "DFT conformers"]
+
+spk_rdkit_sepp_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  targets_atomistic_type: ["DipoleMoment", "Atomwise", "Atomwise", "Atomwise", "Atomwise", "Atomwise"]
+  targets_transformation: ["None", "norm", "norm", "norm", "norm", "norm"]
+  associating_columns: [ "KAB", "epsilonAB"]
+  filter_non_associating: true
+  use_dipole_vector_representation: true
+  wandb_checkpoint_artifact_id: "ceb-sre/dl4thermo/model-dsaflkj43j:v0"
+  save_dir: 'data/07_model_output/spk'
+  data_source: "SEPP"
+  wandb_tags: ["SEPP", "SPK", "RDKit conformers"]
+  wandb_artifact_name: "spk_rdkit_sepp_pcp_saft_model"
+
+spk_regressed_pcp_saft_model.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  targets_atomistic_type: ["DipoleMoment", "Atomwise", "Atomwise", "Atomwise", "Atomwise", "Atomwise"]
+  targets_transformation: ["None", "norm", "norm", "norm", "norm", "norm"]
+  use_dipole_vector_representation: true
+  associating_columns: ["KAB", "epsilonAB"]
+  filter_non_associating: true
+  data_source: "regressed"
+  wandb_artifact_name: "spk_sepp_pcp_saft_model"
+  save_dir: 'data/07_model_output/spk'
+  wandb_tags: ["Regressed SEPP", "SPK", "DFT conformers"]
+
+spk_rdkit_regressed_pcp_saft.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["smiles_1"]
+  target_columns: ["mu","m", "sigma",  "epsilon_k" , "KAB", "epsilonAB"]
+  molecule_lookup_column: "#DDB"
+  targets_atomistic_type: ["DipoleMoment", "Atomwise", "Atomwise", "Atomwise", "Atomwise", "Atomwise"]
+  targets_transformation: ["None", "norm", "norm", "norm", "norm", "norm"]
+  use_dipole_vector_representation: true
+  data_source: "regressed"
+  save_dir: 'data/07_model_output/spk'
+  wandb_tags: ["Regressed SEPP", "SPK", "RDKit conformers"]
+  wandb_artifact_name: "spk_rdkit_sepp_pcp_saft_model"
+  
+spk_model_sigma_moments.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["Smiles"]
+  molecule_lookup_column: "compoundName"
+  target_columns: ["sigma_moment_2", "sigma_moment_3", "sigma_moment_4", "sigma_moment_5"]
+  targets_atomistic_type: ["Atomwise", "Atomwise", "Atomwise", "Atomwise"]
+  targets_transformation: ["norm", "norm", "norm", "norm"]
+  wandb_artifact_name: "spk"
+  data_source: "SEPP"
+  save_dir: 'data/07_model_output/spk_sigma_moments'
+  wandb_tags: ["SPK", "sigma_moments"]
+  
+spk_qm9.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: [null]
+  target_columns: ["dipole_moment"]
+  targets_atomistic_type: ["DipoleMoment"]
+  targets_transformation: ["None"]
+  wandb_artifact_name: "spk_qm9"
+  use_dipole_vector_representation: true
+  data_source: "QM9"
+  batch_size: 1000
+  database_name: "qm9.db"
+  auto_lr_find: true
+  early_stopping: true
+  save_dir: 'data/07_model_output/spk_qm9'
+  overwrite_save_dir: false
+  wandb_tags: ["SPK", "QM9"]
+
+
+spk_qm9_mu_mixed:
+  sepp_name_changes: 
+    - ["mu", "dipole_moment"]
+    - ["Name", "id"]
+  train_args:
+    type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+    smiles_columns: ["smiles"]
+    target_columns: ["dipole_moment"]
+    targets_atomistic_type: ["DipoleMoment"]
+    targets_transformation: ["None"]
+    wandb_artifact_name: "spk_qm9"
+    use_dipole_vector_representation: true
+    molecule_lookup_column: "id"
+    data_source: "QM9"
+    batch_size: 1000
+    database_name: "qm9.db"
+    auto_lr_find: true
+    early_stopping: true
+    save_dir: 'data/07_model_output/spk_qm9'
+    overwrite_save_dir: false
+    wandb_tags: ["SPK", "QM9"]
+  
+spk_mu_sepp.train_args:
+  type: dl4thermo.pipelines.train_models.models.spk.SPKTrainArgs
+  smiles_columns: ["Smiles"]
+  target_columns: ["mu"]
+  targets_atomistic_type: ["DipoleMoment"]
+  targets_transformation: ["None"]
+  wandb_artifact_name: "spk_mu_sepp"
+  use_dipole_vector_representation: true
+  wandb_checkpoint_artifact_id: "ceb-sre/dl4thermo/model-dsaflkj43j:v0"
+  data_source: "SEPP"
+  save_dir: 'data/07_model_output/spk_sepp_mu'
+  wandb_tags: ["SEPP", "SPK", "DFT conformers", "pretrained", "single-task"]

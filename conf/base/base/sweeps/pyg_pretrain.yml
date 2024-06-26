@@ -1,0 +1,55 @@
+base_config_filepath: "conf/base/parameters/train_models.yml"
+key: pyg_regressed_pcp_saft_model.train_args
+pipeline: train_pyg_regressed_model
+num_trials: 10
+params:
+  ### Transfer learning related ###
+  freeze_encoder:
+    values: [true, false]
+  freeze_normalization:
+    values: [true]
+  wandb_checkpoint_artifact_id: 
+    values: ["ceb-sre/dl4thermo/model-bili56s2:v3"]
+  ### Training related parameters ###
+  # Probability of setting fingerprint
+  # bits to zero
+  dropout:
+    min: 0.1
+    max: 0.5
+    scaling: linear
+    type: float
+  lr:
+    min: 0.00001
+    max: 0.001
+    scaling: log
+    type: float
+  optimizer:
+    values: [adam]
+  beta_1:
+    key: optimizer_kwargs
+    min: 0.8
+    max: 0.99
+    scaling: log
+    type: float
+  scheduler:
+    values: 
+      noam:
+        key: scheduler_kwargs 
+        params:
+          warmup_epochs:
+            min: 1
+            max: 100
+            scaling: linear
+            type: integer
+          max_lr_ratio:
+            min: 10
+            max: 100
+            scaling: linear
+          final_lr_ratio:
+            min: 0.1
+            max: 1.0
+            scaling: linear
+        num_trials: 10
+      null:
+        params: {}
+        num_trials: 1
