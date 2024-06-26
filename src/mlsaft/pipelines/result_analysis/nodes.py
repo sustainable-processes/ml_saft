@@ -8,7 +8,6 @@ import os
 from pathlib import Path
 from typing import Callable, Dict, List, Literal, Optional, Tuple, Union
 
-import dl4thermo.extras.utils.counterfactual as counterfactual
 import latextable
 import numpy as np
 import pandas as pd
@@ -20,6 +19,7 @@ from matplotlib.figure import Figure
 from texttable import Texttable
 from tqdm import tqdm
 
+import mlsaft.extras.utils.counterfactual as counterfactual
 from mlsaft.extras.utils.metrics import calculate_metrics
 from mlsaft.extras.utils.pcsaft import is_associating, make_pcsaft_predictions
 from mlsaft.extras.utils.plotting import (
