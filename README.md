@@ -1,4 +1,4 @@
-# DL4Thermo
+# ML-SAFT
 
 This project aims to build a method for predicting equation of state parameters directly from molecular structures. We use PC-SAFT as the equation of state in this case study.
 

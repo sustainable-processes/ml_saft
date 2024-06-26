@@ -1,6 +1,6 @@
 [tool.kedro]
-package_name = "dl4thermo"
-project_name = "DL4Thermo"
+package_name = "mlsaft"
+project_name = "mlsaft"
 project_version = "0.18.0"
 
 [tool.isort]
@@ -14,7 +14,7 @@ known_third_party = "kedro"
 [tool.pytest.ini_options]
 addopts = """
 --cov-report term-missing \
---cov src/dl4thermo -ra"""
+--cov src/mlsaft -ra"""
 
 [tool.coverage.report]
 fail_under = 0
@@ -23,7 +23,7 @@ exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
 
 
 [tool.poetry]
-name = "dl4thermo"
+name = "mlsaft"
 version = "0.1.0"
 description = ""
 authors = [
@@ -31,7 +31,7 @@ authors = [
     "Jan Ritting <jan.rittig@rwth-aachen.de>",
     "Lukas Rasspe <lukas.rasspe@ltt.rwth-aachen.de>",
 ]
-packages = [{ include = "dl4thermo", from = "src" }]
+packages = [{ include = "mlsaft", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8,!=3.9.7,<3.11"

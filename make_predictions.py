@@ -3,9 +3,8 @@ from pathlib import Path
 
 import pandas as pd
 from joblib import load
-
-from dl4thermo.extras.utils.molecular_fingerprints import compute_morgan_fingerprints
-from wandb import Api
+from mlsaft.extras.utils.molecular_fingerprints import compute_morgan_fingerprints
+from wandb.apis import Api
 
 
 def main(smiles_list_path: str, save_path: str = "predictions.csv"):
