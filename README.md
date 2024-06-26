@@ -208,24 +208,4 @@ You can then load data like this:
 df = catalog.load("imported_thermoml")
 ```
 
-### Merging notebooks
-
-Jupyter notebooks are notoriously difficult to merge. Use [nbdime](https://nbdime.readthedocs.io/en/latest/vcs.html#id4) to help with this, which is installed as part of the development dependencies. If you get a failed merge, do the following:
-
-1. Register nbdime as a merge tool:
-    ```bash
-    git-nbmergetool config --enable 
-    ```
-
-2. View the nbdime merge web interface on the file that failed to automerge
-
-    ```bash
-    git mergetool --tool=nbdime [<file>…​]
-    ```
-
-
- ## Citations
-
-- Chemprop
-- The `chem_utils` code comes from [Kyle Swanson](https://github.com/swansonk14/chem_utils/)
 
