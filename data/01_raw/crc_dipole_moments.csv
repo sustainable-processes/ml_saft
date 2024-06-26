@@ -1,0 +1,886 @@
+Name,Moelcular Formula,Dipole,Ref
+Hydrazine,H4N2,1.75 ± 0.09,1
+Hydrazoic acid,HN3,1.70 ± 0.09,3
+Hydrogen bromide,BrH,0.8272 ± 0.0003,3
+Hydrogen chloride,ClH,1.1086 ± 0.0003,3
+Hydrogen fluoride,FH,1.826178,2
+Hydrogen iodide,HI,0.448 ± 0.001,2
+Hydrogen peroxide,H2O2,1.573 ± 0.001,65
+Hydrogen sulfide,H2S,0.97833,5
+Hydroxyl,HO,1.655 ± 0.001,5
+Hydroxylamine,H3NO,0.59 ± 0.05,2
+Hypochlorous acid,ClHO,≈1.3,2
+Hypofluorous acid,FHO,2.23 ± 0.11,3
+Imidogen,HN,1.39 ± 0.07,3
+Indium(I) chloride,ClIn,3.79 ± 0.19,2
+Indium(I) fluoride,FIn,3.40 ± 0.07,2
+Iodine bromide,BrI,0.726 ± 0.003,5
+Iodine chloride,ClI,1.24 ± 0.02,2
+Iodine fluoride,FI,1.948 ± 0.020,3
+Iodine monoxide,IO,2.45 ± 0.05,2
+Iodine pentafluoride,F5I,2.18 ± 0.11,1
+Lanthanum monoxide,LaO,3.207 ± 0.011,26
+Lead(II) oxide,OPb,4.64 ± 0.50,2
+Lead(II) sulfide,PbS,3.59 ± 0.18,2
+Lithium bromide,BrLi,7.268 ± 0.001,2
+Lithium chloride,ClLi,7.12887,2
+Lithium fluoride,FLi,6.3274 ± 0.0002,3
+Lithium fluoride–sodium,FLi•FNa,2.62 ± 0.02,51
+fluoride complex,,,
+Lithium hydride,HLi,5.884 ± 0.001,2
+Lithium hydroxide,HLiO,4.754 ± 0.002,3
+Lithium iodide,ILi,7.428 ± 0.001,2
+Lithium monoxide,LiO,6.84 ± 0.03,2
+Lithium potassium,KLi,3.45 ± 0.20,2
+Lithium rubidium,LiRb,4.0 ± 0.1,2
+Lithium sodium,LiNa,0.463 ± 0.002,2
+Magnesium oxide,MgO,6.2 ± 0.6,5
+Mercapto,HS,0.7580 ± 0.0001,3
+Nitric acid,HNO3,2.17 ± 0.02,1
+Nitric oxide,NO,0.15872,2
+Nitrogen dioxide,NO2,0.316 ± 0.010,1
+Nitrogen sulfide,NS,1.81 ± 0.02,2
+Nitrogen trichloride,Cl3N,0.39 ± 0.01,3
+Nitrogen trifluoride,F3N,0.235 ± 0.004,1
+Nitrogen trioxide,N2O3,2.122 ± 0.010,2
+Nitrosyl bromide,BrNO,≈1.8,1
+Nitrosyl fluoride,FNO,1.730 ± 0.003,3
+Nitrosyl hydride,HNO,1.62 ± 0.03,3
+Nitrous acid (cis),HNO2,1.423 ± 0.005,2
+Nitrous acid (trans),HNO2,1.855 ± 0.016,2
+Nitrous oxide,N2O,0.16083,3
+Nitryl chloride,ClNO2,0.53,1
+Nitryl fluoride,FNO2,0.466 ± 0.005,2
+Ozone,O3,0.53373,3
+Pentaborane(9),B5H9,2.13 ± 0.04,1
+Perchloryl fluoride,ClFO3,0.023 ± 0.001,3
+Peroxynitrous acid,HNO3,1.07 ± 0.002,46
+Aluminum monofluoride,AlF,1.53 ± 0.15,1
+Ammonia,H3N,1.4718 ± 0.0002,5
+Arsenic(III) chloride,AsCl3,1.59 ± 0.08,1
+Arsenic(III) fluoride,AsF3,2.59 ± 0.05,1
+Arsine,AsH3,0.217 ± 0.003,5
+Barium oxide,BaO,7.954 ± 0.003,5
+Barium sulfide,BaS,10.86 ± 0.02,3
+Bromine chloride,BrCl,0.519 ± 0.004,3
+Bromine dioxide,BrO2,2.8 ± 0.1,18
+Bromine fluoride,BrF,1.422 ± 0.016,3
+Bromine oxide,BrO,1.76 ± 0.04,2
+Bromine pentafluoride,BrF5,1.51 ± 0.15,1
+Bromosilane,BrH3Si,1.319,3
+Bromotrifluorosilane,BrF3Si,0.835 ± 0.007,64
+Calcium monochloride,CaCl,≈3.6,4
+Cesium chloride,ClCs,10.387 ± 0.004,2
+Cesium fluoride,CsF,7.884 ± 0.001,2
+Cesium sodium,CsNa,4.75 ± 0.20,2
+Chlorine fluoride,ClF,0.888061,5
+Chlorine oxide,ClO,1.297 ± 0.001,5
+Chlorine trifluoride,ClF3,0.6 ± 0.1,1
+Chloroborane,BClH2,0.75 ± 0.05,14
+Chlorogermane,ClGeH3,2.13 ± 0.02,1
+Chlorosilane,ClH3Si,1.31 ± 0.01,1
+Chlorosyl fluoride,ClFO,1.93 ± 0.02,55
+Chlorotrifluorosilane,ClF3Si,0.636 ± 0.004,5
+Chromium monoxide,CrO,3.88 ± 0.13,5
+Copper(I) fluoride,CuF,5.77 ± 0.29,2
+Copper(II) oxide,CuO,4.5 ± 0.5,5
+Dichlorosilane,Cl2H2Si,1.17 ± 0.02,1
+Difluoramine,F2HN,1.92 ± 0.02,1
+Difluorine dioxide,F2O2,1.44 ± 0.07,1
+Difluoroborane,BF2H,0.971 ± 0.010,8
+cis-Difluorodiazine,F2N2,0.16 ± 0.01,1
+Difluorosilane,F2H2Si,1.55 ± 0.02,1
+Difluorosilylene,F2Si,1.23 ± 0.02,2
+Disiloxane,H6OSi2,0.24 ± 0.02,1
+Fluoramine,FH2N,2.27 ± 0.18,5
+Fluorine azide,FN3,≈1.3,5
+Fluorine monoxide,F2O,0.30818,5
+Fluorine oxide,FO,0.0043 ± 0.0004,5
+Fluoroborane,BF,≈0.5,2
+Fluorogermane,FGeH3,2.33 ± 0.12,2
+Fluorosilane,FH3Si,1.2969 ± 0.0006,5
+Gallium monofluoride,FGa,2.45 ± 0.05,2
+Germanium(II) fluoride,F2Ge,2.61 ± 0.02,2
+Germanium(II) oxide,GeO,3.2823 ± 0.0001,2
+Germanium(II) selenide,GeSe,1.65 ± 0.05,2
+Germanium(II) sulfide,GeS,2.00 ± 0.06,2
+Germanium(II) telluride,GeTe,1.06 ± 0.07,2
+Germylazide,GeH3N3,2.58 ± 0.02,25
+Hafnium monoxide,HfO,3.431 ± 0.005,26
+Hafnium(IV) oxide,HfO2,7.92 ± 0.01,39
+Hexaborane(10),B H,2.50 ± 0.05,3
+Peroxynitric acid,HNO4,1.99 ± 0.02,67
+Phosphine,H3P,0.5740 ± 0.0003,3
+Phosphorothioc trifluoride,F3PS,0.64 ± 0.02,1
+Phosphorus(III) chloride,Cl3P,0.56 ± 0.02,2
+Phosphorus(III) fluoride,F3P,1.03 ± 0.01,1
+Phosphorus monoxide,OP,1.88 ± 0.07,5
+Phosphorus nitride,NP,2.7470 ± 0.0001,2
+Phosphoryl chloride,Cl3OP,2.54 ± 0.05,2
+Phosphoryl fluoride,F3OP,1.8685 ± 0.0001,3
+Potassium bromide,BrK,10.628 ± 0.001,2
+Potassium chloride,ClK,10.269 ± 0.001,2
+Potassium fluoride,FK,8.585 ± 0.003,2
+Potassium hydroxide,HKO,7.415 ± 0.002,16
+Potassium iodide,IK,≈10.8,2
+Potassium sodium,KNa,2.693 ± 0.014,3
+Rubidium bromide,BrRb,≈10.9,2
+Rubidium chloride,ClRb,10.510 ± 0.005,2
+Rubidium fluoride,FRb,8.5465 ± 0.0005,2
+Rubidium iodide,IRb,≈11.5,2
+Rubidium sodium,NaRb,3.1 ± 0.3,2
+Selenium dioxide,O2Se,2.62 ± 0.05,2
+Selenium tetrafluoride,F4Se,1.78 ± 0.09,2
+Silicon monosulfide,SSi,1.73 ± 0.09,2
+Silicon monoxide,OSi,3.0982,2
+Silver(I) bromide,AgBr,5.62 ± 0.03,5
+Silver(I) chloride,AgCl,6.08 ± 0.06,5
+Silver(I) fluoride,AgF,6.22 ± 0.30,2
+Silver(I) iodide,AgI,4.55 ± 0.05,5
+Sodium bromide,BrNa,9.1183 ± 0.0006,2
+Sodium chloride,ClNa,9.00117,2
+Sodium fluoride,FNa,8.156 ± 0.001,2
+Sodium iodide,INa,9.236 ± 0.003,2
+Stibine,H3Sb,0.12 ± 0.05,1
+Strontium oxide,OSr,8.900 ± 0.003,2
+Sulfur dichloride,Cl2S,0.36 ± 0.01,3
+Sulfur difluoride,F2S,1.05 ± 0.05,2
+Sulfur dioxide,O2S,1.63305,3
+Sulfur monofluoride,FS,0.794 ± 0.02,3
+Sulfur monoxide,OS,1.55 ± 0.02,1
+Sulfur oxide (SSO),OS2,1.47 ± 0.03,1
+Sulfur tetrafluoride,F4S,0.632 ± 0.003,1
+Sulfuryl chloride,Cl2O2S,1.81 ± 0.04,1
+Sulfuryl fluoride,F2O2S,1.12 ± 0.02,1
+TetrMaobloercaunlea(r10),B4H10,0.486 ± 0.002,3
+Tetrafluorohydrazine,F4N2,0.257 ± 0.002,5
+(gauche),,,
+Tetrafluorosilane–ammonia,F4Si•H3N,5.61 ± 0.02,31
+complex,,,
+Thallium(I) bromide,BrTl,4.49 ± 0.05,2
+Thallium(I) chloride,ClTl,4.54299,2
+Thallium(I) fluoride,FTl,4.2282 ± 0.0008,2
+Thallium(I) iodide,ITl,4.61 ± 0.07,2
+Thionitrosyl chloride (NSCl),ClNS,1.87 ± 0.02,2
+Thionitrosyl fluoride (NSF),FNS,1.902 ± 0.012,2
+Thionyl chloride,Cl2OS,1.45 ± 0.03,1
+Thionyl fluoride,F OS,1.63 ± 0.01,1
+Tin(II) oxide,OSn,4.32 ± 0.22,2
+Tin(II) sulfide,SSn,3.18 ± 0.16,2
+Titanium(II) oxide,OTi,2.96 ± 0.05,5
+Trichlorofluorosilane,Cl3FSi,0.49 ± 0.01,2
+Trichlorosilane,Cl3HSi,0.86 ± 0.01,2
+Trifluoramine oxide,F3NO,0.0390 ± 0.0004,9
+"1,1,1-Trifluorodisilane",F3H3Si2,2.03 ± 0.10,3
+Trifluoroiodosilane,F3ISi,1.11 ± 0.03,5
+Trifluorosilane,F3HSi,1.27 ± 0.03,1
+Water,H2O,1.8546 ± 0.0040,3
+Water dimer–hydrogen,H4O2•BrH,2.281 ± 0.003,48
+bromide complex,,,
+Water dimer–hydrogen,H4O2•ClH,2.328 ± 0.003,48
+chloride complex,,,
+Ytterbium monofluoride,FYb,3.91 ± 0.04,45
+Yttrium monoxide,OY,4.524 ± 0.007,26
+Zirconium(II) oxide,OZr,2.55 ± 0.01,26
+Zirconium(IV) oxide,O2Zr,7.80 ± 0.02,19
+Compounds containing carbon,,,
+Acenaphthene,C12H10,≈0.85,1
+Acetaldehyde,C2H4O,2.750 ± 0.006,3
+Acetamide,C2H5NO,3.68 ± 0.03,5
+Acetic acid,C2H4O2,1.70 ± 0.03,2
+Acetic anhydride,C4H6O3,≈2.8,1
+Acetone,C3H6O,2.88 ± 0.03,1
+Acetonitrile,C2H3N,3.92519,5
+Acetophenone,C8H8O,3.02 ± 0.06,1
+Acetyl chloride,C2H3ClO,2.72 ± 0.14,1
+Acetylene–carbon dioxide,C2H2•CO2,0.161 ± 0.001,22
+complex,,,
+Acetylene–carbon monoxide,C2H2•CO,0.311 ± 0.001,32
+complex,,,
+Acetylene–carbon oxysulfide,C2H2•C3O3S3,1.23 ± 0.02,53
+trimer complex,,,
+Acetylene–hydrogen cyanide,C2H2•CHN,3.29 ± 0.03,32
+complex,,,
+Acetyl fluoride,C2H3FO,2.96 ± 0.03,1
+Acrolein (cis),C3H4O,2.552 ± 0.003,5
+Acrolein (trans),C3H4O,3.117 ± 0.004,5
+Acrylonitrile,C3H3N,3.92 ± 0.07,5
+Allyl alcohol (gauche),C3H6O,1.55 ± 0.08,3
+Allyl alcohol (average),C3H6O,1.60 ± 0.08,1
+Allylamine,C3H7N,≈1.2,1
+Aniline,C6H7N,1.13 ± 0.02,3
+Anisole,C7H8O,1.38 ± 0.07,1
+Azulene,C10H8,0.80 ± 0.02,1
+Benzaldehyde,C7H6O,[3.0],7
+Benzeneacetonitrile,C8H7N,[3.5],7
+Benzene–hydrogen sulfide,C6H6•H2S,1.14 ± 0.02,40
+complex,,,
+Benzene–krypton complex,C6H6•Kr,0.136 ± 0.002,58
+Benzene–sulfur dioxide,C6H6•O2S,2.061 ± 0.002,33
+complex,,,
+Benzenethiol,C6H6S,[1.23],7
+Benzonitrile,C7H5N,4.18 ± 0.08,1
+Benzyl acetate,C9H10O2,[1.22],7
+Benzyl alcohol,C7H8O,1.71 ± 0.09,1
+Benzyl benzoate,C14H12O2,[2.06],7
+Bis(2-aminoethyl)amine,C4H13N3,[1.89],7
+Bis(2-chloroethyl) ether,C4H8Cl2O,[2.58],7
+Bis(2-ethylhexyl) phthalate,C24H38O4,[2.84],7
+Borane carbonyl,CH3BO,1.698 ± 0.020,3
+Bromoacetylene,C2HBr,0.22962,5
+Bromobenzene,C6H5Br,1.70 ± 0.03,1
+1-Bromobutane,C4H9Br,2.08 ± 0.10,1
+2-Bromobutane,C4H9Br,2.23 ± 0.11,1
+1-Bromo-2-chloroethane,C2H4BrCl,[1.2],7
+Bromochlorofluoromethane,CHBrClF,1.5 ± 0.3,17
+Bromochloromethane,CH2BrCl,[1.66],7
+1-Bromodecane,C10H21Br,[1.93],7
+Bromoethane,C2H5Br,2.04 ± 0.02,5
+Bromoethene,C2H3Br,1.42 ± 0.03,1
+Bromofluoroacetylene,C2BrF,0.448 ± 0.002,5
+1-Bromoheptane,C7H15Br,2.16 ± 0.11,1
+Bromomethane,CH3Br,1.8203 ± 0.0004,5
+2-Bromo-2-methylpropane,C4H9Br,[2.17],7
+1-Bromonaphthalene,C10H7Br,[1.55],7
+1-Bromopentane,C5H11Br,2.20 ± 0.11,1
+1-Bromopropane,C3H7Br,2.18 ± 0.11,1
+2-Bromopropane,C3H7Br,2.21 ± 0.11,1
+2-Bromopropene,C3H5Br,[1.51],7
+3-Bromopropene,C3H5Br,≈1.9,1
+Bromotrifluoromethane,CBrF3,0.65 ± 0.05,1
+"1,2-Butadiene",C4H6,0.403 ± 0.002,1
+Butanal,C4H8O,2.72 ± 0.05,1
+"1,4-Butanediol",C4H10O2,[2.58],7
+Butanenitrile (gauche),C4H7N,3.91 ± 0.04,5
+Butanenitrile (anti),C4H7N,3.73 ± 0.06,5
+1-Butanethiol,C4H10S,[1.53],7
+Butanoic acid,C4H8O2,[1.65],7
+1-Butanol,C4H10O,1.66 ± 0.03,1
+2-Butanone,C4H8O,2.779 ± 0.015,2
+trans-2-Butenal,C4H6O,3.67 ± 0.07,1
+1-Butene (cis),C4H8,0.438 ± 0.007,2
+1-Butene (skew),C4H8,0.359 ± 0.011,2
+cis-2-Butene,C4H8,0.253 ± 0.005,2
+"cis-2-Butene-1,4-diol",C4H8O2,[2.48],7
+"trans-2-Butene-1,4-diol",C4H8O2,[2.45],7
+trans-2-Butenoic acid,C4H6O2,[2.13],7
+cis-2-Buten-1-ol,C4H8O,1.96 ± 0.03,5
+trans-2-Buten-1-ol,C4H8O,1.90 ± 0.02,5
+1-Buten-3-yne,C4H4,0.22 ± 0.02,3
+2-Butoxyethanol,C6H14O2,[2.08],7
+Butyl acetate,C6H12O2,[1.87],7
+sec-Butyl acetate,C6H12O2,[1.87],7
+Butylamine,C4H11N,≈1.0,1
+sec-Butylamine,C4H11N,[1.28],7
+tert-Butylamine,C4H11N,[1.29],7
+tert-Butylbenzene,C10H14,≈0.83,1
+Butyl ethyl ether,C6H14O,[1.24],7
+Butyl formate,C5H10O2,[2.03],7
+Butyl stearate,C22H44O2,[1.88],7
+Butyl vinyl ether,C6H12O,[1.25],7
+1-Butyne,C4H6,0.782 ± 0.004,5
+γ-Butyrolactone,C4H6O2,4.27 ± 0.03,3
+Calcium methoxide,CH3CaO,1.58 ± 0.08,43
+"Camphor, (+)",C10H16O,[3.1],7
+Caprolactam,C6H11NO,[3.9],7
+Carboimidic difluoride,CHF2N,1.393 ± 0.001,5
+Carbon dioxide dimer–water,C2O4•H2O,1.989 ± 0.002,23
+complex,,,
+Carbon dioxide–mercury,CO2•Hg,0.107 ± 0.003,29
+complex,,,
+Carbon dioxide–water dimer,CO2•H4O2,1.746 ± 0.010,28
+complex,,,
+Carbon disulfide–sulfur,CO2•O2S,1.096 ± 0.001,42
+dioxide complex,,,
+Carbon monoselenide,CSe,1.99 ± 0.04,3
+Carbon monosulfide,CS,1.958 ± 0.005,2
+Carbon monoxide,CO,0.1098,3
+Carbon monoxide dimer–,C2O2•H2O,1.57 ± 0.05,36
+water complex,,,
+Carbon oxyselenide,COSe,0.73 ± 0.02,1
+Carbon oxysulfide,COS,0.715189,5
+Carbon oxysulfide–carbon,COS•C2O4,0.69 ± 0.05,44
+dioxide dimer complex,,,
+Carbon oxysulfide–water,COS•H2O,2.668 ± 0.003,37
+complex,,,
+Carbonyl chloride,CCl2O,1.17 ± 0.01,1
+Carbonyl fluoride,CF2O,0.95 ± 0.01,1
+Chloroacetyl chloride,C2H2Cl2O,2.23 ± 0.11,1
+Chloroacetylene,C2HCl,0.44408,5
+2-Chloroaniline,C6H6ClN,[1.77],7
+Chlorobenzene,C6H5Cl,1.69 ± 0.03,1
+1-Chlorobutane,C4H9Cl,2.05 ± 0.04,1
+2-Chlorobutane,C4H9Cl,2.04 ± 0.10,1
+Chlorocyclohexane (axial),C6H11Cl,1.91 ± 0.02,5
+Chlorocyclohexane,C6H11Cl,2.44 ± 0.07,5
+(equitorial),,,
+"1-Chloro-1,1-difluoroethane",C2H3ClF2,2.14 ± 0.04,1
+Chlorodifluoromethane,CHClF2,1.42 ± 0.03,1
+Chloroethane,C2H5Cl,2.05 ± 0.02,1
+2-Chloroethanol,C2H5ClO,1.78 ± 0.09,1
+Chloroethene,C2H3Cl,1.45 ± 0.03,1
+1-Chloro-4-fluorobenzene,C6H4ClF,0.12 ± 0.01,66
+1-Chloro-1-fluoroethane,C2H4ClF,2.068 ± 0.014,3
+Chlorofluoromethane,CH2ClF,1.82 ± 0.04,1
+Chloromethane,CH3Cl,1.8963 ± 0.0002,5
+(Chloromethyl)benzene,C7H7Cl,[1.82],7
+1-Chloro-3-methylbutane,C5H11Cl,[1.92],7
+1-Chloro-2-methylpropane,C4H9Cl,2.00 ± 0.10,1
+2-Chloro-2-methylpropane,C4H9Cl,2.13 ± 0.04,1
+1-Chloronaphthalene,C10H7Cl,[1.57],7
+1-Chloro-2-nitrobenzene,C6H4ClNO2,4.64 ± 0.09,1
+1-Chloro-3-nitrobenzene,C6H4ClNO2,3.73 ± 0.07,1
+1-Chloro-4-nitrobenzene,C6H4ClNO2,2.83 ± 0.06,1
+1-Chlorooctane,C8H17Cl,[2.00],7
+Chloropentafluoroethane,C2ClF5,0.52 ± 0.05,1
+1-Chloropentane,C5H11Cl,2.16 ± 0.11,1
+4-Chlorophenol,C6H5ClO,2.11 ± 0.11,1
+1-Chloropropane (gauche),C3H7Cl,2.02 ± 0.03,5
+1-Chloropropane (trans),C3H7Cl,1.95 ± 0.02,5
+1-Chloropropane (average),C3H7Cl,2.05 ± 0.04,1
+2-Chloropropane,C3H7Cl,2.17 ± 0.11,1
+cis-1-Chloropropene,C3H5Cl,1.67 ± 0.08,1
+trans-1-Chloropropene,C3H5Cl,1.97 ± 0.10,1
+2-Chloropropene,C3H5Cl,1.647 ± 0.010,3
+3-Chloropropene,C3H5Cl,1.94 ± 0.10,1
+4-Chloropyridine,C5H4ClN,0.756 ± 0.005,3
+2-Chlorotoluene,C7H7Cl,1.56 ± 0.08,1
+3-Chlorotoluene,C7H7Cl,[1.82],7
+4-Chlorotoluene,C7H7Cl,2.21 ± 0.04,1
+Chlorotrifluoroethene,C2ClF3,0.40 ± 0.10,1
+Chlorotrifluoromethane,CClF3,0.50 ± 0.01,1
+o-Cresol,C7H8O,[1.45],7
+m-Cresol,C7H8O,[1.48],7
+p-Cresol,C7H8O,[1.48],7
+Cyanamide,CH2N2,4.28 ± 0.10,5
+Cyanoacetylene,C3HN,3.73172,5
+Cyanoformamide,C2H2N2O,4.10 ± 0.12,47
+Cyanogen azide (NCN3),CN4,2.96 ± 0.07,60
+Cyanogen chloride,CClN,2.8331 ± 0.0002,3
+Cyanogen fluoride,CFN,2.120 ± 0.001,3
+Cyanogen iodide,CIN,3.67 ± 0.02,5
+Cyanomethylmercury,C2H3HgN,4.7 ± 0.1,12
+Cyclobutanecarbonitrile,C5H7N,4.04 ± 0.04,5
+Cyclobutanone,C4H6O,2.89 ± 0.03,2
+Cyclobutene,C4H6,0.132 ± 0.001,1
+"1,3-Cycloheptadiene",C7H10,0.74,3
+"2,4,6-Cycloheptatrien-1-one",C7H6O,4.1 ± 0.3,3
+"3,5-Cyclohexadiene-1,2-",C6H4O2,4.23 ± 0.02,3
+dione,,,
+Cyclohexanone,C6H10O,3.246 ± 0.006,5
+Cyclohexene (half-chair),C6H10,0.332 ± 0.012,2
+Cyclohexylamine,C6H13N,[1.26],7
+"1,3-Cyclopentadiene",C5H6,0.419 ± 0.004,1
+"2,4-Cyclopentadien-1-one",C5H4O,3.132 ± 0.007,3
+Cyclopentanone,C5H8O,≈3.3,1
+Cyclopentene,C5H8,0.20 ± 0.02,1
+3-Cyclopenten-1-one,C5H6O,2.79 ± 0.03,3
+Cyclopropane-sulfur dioxide,C3H6•O2S,1.681 ± 0.001,30
+complex,,,
+Cyclopropanone,C3H4O,2.67 ± 0.13,2
+CycMlooplreocpuelanre,C3H4,0.454 ± 0.010,1
+Cyclopropylamine,C3H7N,1.19 ± 0.01,2
+Cyclopropyl methyl ketone,C5H8O,2.62 ± 0.25,2
+Diacetone alcohol,C6H12O2,[3.24],7
+Diazomethane,CH2N2,1.50 ± 0.01,1
+Dibromodifluoromethane,CBr2F2,0.66 ± 0.05,1
+"1,2-Dibromoethane",C2H4Br2,[1.19],7
+Dibromomethane,CH2Br2,1.43 ± 0.03,1
+"1,2-Dibromopropane",C3H6Br2,[1.2],7
+Dibutylamine,C8H19N,[0.98],7
+Dibutyl ether,C8H18O,1.17 ± 0.06,1
+Dibutyl phthalate,C16H22O4,[2.82],7
+Dibutyl sebacate,C H O,[2.48],7
+Dibutyl sulfide,C8H18S,[1.61],7
+o-Dichlorobenzene,C6H4Cl2,2.50 ± 0.05,1
+m-Dichlorobenzene,C6H4Cl2,1.72 ± 0.09,1
+"1,4-Dichlorobutane",C4H8Cl2,2.22 ± 0.11,1
+"1,1-Dichloro-2,2-",C2Cl2F2,0.5,7
+difluoroethene,,,
+Dichlorodifluoromethane,CCl2F2,0.51 ± 0.05,1
+"1,1-Dichloroethane",C2H4Cl2,2.06 ± 0.04,1
+"1,2-Dichloroethane",C2H4Cl2,[1.83],7
+"1,1-Dichloroethene",C2H2Cl2,1.34 ± 0.01,1
+"cis-1,2-Dichloroethene",C2H2Cl2,1.90 ± 0.04,1
+Dichlorofluoromethane,CHCl2F,1.29 ± 0.03,1
+"1,1-Dichloro-2-",C3H3Cl2F,2.43 ± 0.02,3
+fluoropropene,,,
+Dichloromethane,CH2Cl2,1.60 ± 0.03,1
+(Dichloromethyl)benzene,C7H6Cl2,[2.07],7
+Dichloromethylborane,CH3BCl2,1.419 ± 0.013,5
+"1,2-Dichloropropane",C3H6Cl2,[1.85],7
+"1,3-Dichloropropane",C3H6Cl2,2.08 ± 0.04,1
+"1,2-Dichloro-1,1,2,2-",C2Cl2F4,≈0.5,1
+tetrafluoroethane,,,
+"2,4-Dichlorotoluene",C7H6Cl2,[1.70],7
+"3,4-Dichlorotoluene",C7H6Cl2,[2.95],7
+Diethanolamine,C4H11NO2,[2.8],7
+"1,1-Diethoxyethane",C6H14O2,[1.38],7
+Diethylamine,C4H11N,0.92 ± 0.05,1
+Diethyl carbonate,C5H10O3,1.10 ± 0.06,1
+Diethylene glycol,C4H10O3,[2.31],7
+Diethylene glycol dimethyl,C6H14O3,[1.97],7
+ether,,,
+Diethylene glycol monoethyl,C6H14O3,[1.6],7
+ether,,,
+Diethylene glycol monoethyl,C8H16O4,[1.8],7
+ether acetate,,,
+Diethylene glycol,C5H12O3,[1.6],7
+monomethyl ether,,,
+Diethyl ether,C4H10O,1.098 ± 0.001,38
+Diethyl malonate,C7H12O4,[2.54],7
+Diethyl oxalate,C6H10O4,[2.49],7
+Diethyl sulfide (trans-trans),C4H10S,1.556 ± 0.004,54
+Diethyl sulfide (trans-,C4H10S,1.591 ± 0.009,54
+gauche),,,
+Diethyl sulfide (gauche-,C4H10S,1.645 ± 0.001,54
+gauche),,,
+o-Difluorobenzene,C6H4F2,2.46 ± 0.05,2
+m-Difluorobenzene,C6H4F2,1.51 ± 0.02,2
+"1,1-Difluorocyclohexane",C6H10F2,2.556 ± 0.010,3
+"3,3-Difluorocyclopropene",C3H2F2,2.98 ± 0.02,3
+"1,1-Difluoroethane",C2H4F2,2.27 ± 0.05,1
+"1,2-Difluoroethane (gauche)",C2H4F2,2.67 ± 0.13,2
+"1,1-Difluoroethene",C2H2F2,1.3893 ± 0.0002,5
+"cis-1,2-Difluoroethene",C2H2F2,2.42 ± 0.02,1
+Difluoromethane,CH2F2,1.9785 ± 0.02,3
+Difluoromethylborane,CH3BF2,1.668 ± 0.003,3
+Difluoromethylene,CF2,0.47 ± 0.02,3
+"1,1-Difluoro-1-propene",C3H4F2,0.889 ± 0.007,2
+"2,3-Dihydro-1,4-dioxin",C4H6O2,0.939 ± 0.008,3
+"3,6-Dihydro-1,2-dioxin",C4H6O2,2.329 ± 0.001,3
+"2,3-Dihydrofuran",C4H6O,1.32 ± 0.03,2
+"2,5-Dihydrofuran",C4H6O,1.63 ± 0.01,5
+Dihydro-3-methyl-2(3H)-,C5H8O2,4.56 ± 0.02,5
+furanone,,,
+Dihydro-5-methyl-2(3H)-,C5H8O2,4.71 ± 0.05,5
+furanone,,,
+"3,4-Dihydro-2H-pyran",C5H8O,1.400 ± 0.008,5
+"3,6-Dihydro-2H-pyran",C5H8O,1.283 ± 0.005,3
+"2,3-Dihydrothiophene",C4H6S,1.61 ± 0.20,5
+"2,5-Dihydrothiophene",C4H6S,1.75 ± 0.01,3
+Diiodomethane,CH2I2,[1.08],7
+Diisopentyl ether,C10H22O,[1.23],7
+Diisopropylamine,C6H15N,[1.15],7
+Diisopropyl ether,C6H14O,1.13 ± 0.10,1
+Diketene,C4H4O2,3.53 ± 0.07,1
+"1,2-Dimethoxybenzene",C8H10O2,[1.29],7
+Dimethoxymethane,C3H8O2,[0.74],7
+"N,N-Dimethylacetamide",C4H9NO,[3.7],7
+Dimethylamine,C2H7N,1.01 ± 0.02,2
+"N,N-Dimethylaniline",C8H11N,1.68 ± 0.17,1
+"2,4-Dimethylaniline",C8H11N,[1.40],7
+"2,6-Dimethylaniline",C8H11N,[1.63],7
+"3,3-Dimethyl-1-butyne",C6H10,0.661 ± 0.004,1
+"1,1-Dimethylcyclopropane",C5H10,0.142 ± 0.001,3
+"3,3-Dimethylcyclopropene",C5H8,0.287 ± 0.003,3
+Dimethyl disulfide,C2H6S2,[1.85],7
+Dimethyl ether,C2H6O,1.30 ± 0.01,1
+"N,N-Dimethylformamide",C3H7NO,3.82 ± 0.08,1
+"2,6-Dimethyl-4-heptanone",C9H18O,[2.66],7
+Dimethyl maleate,C6H8O4,[2.48],7
+"2,4-Dimethyl-3-pentanone",C7H14O,[2.74],7
+"2,2-Dimethylpropanal",C5H10O,2.66 ± 0.05,2
+"2,2-Dimethylpropanenitrile",C5H9N,3.95 ± 0.04,1
+"2,4-Dimethylpyridine",C7H9N,[2.30],7
+"2,6-Dimethylpyridine",C7H9N,[1.66],7
+Dimethyl sulfide,C2H6S,1.554 ± 0.004,3
+Dimethyl sulfoxide,C2H6OS,3.96 ± 0.04,1
+"1,3-Dioxane",C4H8O2,2.06 ± 0.04,2
+"1,3-Dioxolane",C3H6O2,1.19 ± 0.06,3
+Dipentyl ether,C10H22O,[1.20],7
+Diphenyl ether,C12H10O,≈1.3,1
+Dipropylamine,C6H15N,[1.03],7
+Dipropyl ether,C6H14O,1.21 ± 0.06,1
+"1,3-Dithiane",C4H8S2,2.14 ± 0.04,5
+Divinyl ether,C4H6O,0.78 ± 0.05,2
+Epichlorohydrin,C3H5ClO,[1.8],7
+"1,2-Epoxybutane",C4H8O,1.891 ± 0.011,3
+"1,2-Ethanediamine",C2H8N2,1.99 ± 0.10,1
+"1,2-Ethanediol, diacetate",C6H10O4,[2.34],7
+"1,2-Ethanedithiol",C2H6S2,2.03 ± 0.08,5
+Ethanethiol (gauche),C2H6S,1.61 ± 0.08,3
+Ethanethiol (trans),C2H6S,1.58 ± 0.08,3
+Ethanol (gauche),C2H6O,1.68 ± 0.03,3
+Ethanol (trans),C2H6O,1.44 ± 0.03,2
+Ethanol (average),C2H6O,1.69 ± 0.03,1
+Ethanolamine,C H NO,[2.27],7
+Ethoxybenzene,C8H10O,1.45 ± 0.15,1
+2-Ethoxyethanol,C4H10O2,[2.08],7
+2-Ethoxyethyl acetate,C6H12O3,[2.25],7
+Ethyl acetate,C4H8O2,1.78 ± 0.09,1
+Ethyl acrylate,C5H8O2,[1.96],7
+Ethylamine (gauche),C2H7N,1.210 ± 0.015,5
+Ethylamine (trans),C2H7N,1.304 ± 0.011,5
+Ethylamine (average),C2H7N,1.22 ± 0.10,1
+Ethylbenzene,C8H10,0.59 ± 0.05,1
+Ethyl benzoate,C9H10O2,2.00 ± 0.10,1
+Ethyl butanoate,C6H12O2,[1.74],7
+Ethyl trans-cinnamate,C11H12O2,[1.84],7
+Ethyl cyanate,C3H5NO,4.72 ± 0.09,5
+Ethyl cyanoacetate,C5H7NO2,[2.17],7
+Ethylene carbonate,C3H4O3,[4.9],7
+Ethylene glycol (average),C2H6O2,2.36 ± 0.10,5
+Ethyleneimine,C2H5N,1.90 ± 0.01,1
+Ethylene–sulfur dioxide,C2H4•O2S,1.650 ± 0.003,27
+complex,,,
+Ethylene–water complex,C2H4•H2O,1.10 ± 0.01,56
+Ethyl formate (gauche),C3H6O2,1.81 ± 0.02,2
+Ethyl formate (trans),C3H6O2,1.98 ± 0.02,2
+Ethyl formate (average),C3H6O2,1.93,1
+2-Ethyl-1-hexanol,C8H18O,[1.74],7
+2-Ethylhexyl acetate,C10H20O2,[1.8],7
+Ethyl lactate,C5H10O3,[2.4],7
+Ethyl methyl ether (trans),C3H8O,1.17 ± 0.02,3
+Ethyl methyl sulfide (gauche),C3H8S,1.593 ± 0.004,5
+Ethyl methyl sulfide (trans),C3H8S,1.56 ± 0.03,3
+Ethyl propanoate,C5H10O2,[1.74],7
+Ethyl vinyl ether,C4H8O,[1.26],7
+Fluoroacetylene,C2HF,0.7207 ± 0.0003,3
+Fluorobenzene,C6H5F,1.60 ± 0.08,1
+Fluorocyclohexane,C6H11F,2.11 ± 0.04,2
+(equitorial),,,
+Fluorocyclohexane (axial),C6H11F,1.81 ± 0.04,2
+1-Fluorocyclohexene,C6H9F,1.942 ± 0.010,5
+Fluoroethane,C2H5F,1.937 ± 0.007,5
+Fluoroethene,C2H3F,1.468 ± 0.003,5
+Fluoromethane,CH3F,1.858 ± 0.002,3
+Fluoromethylidyne,CF,0.645 ± 0.005,3
+(Fluoromethylidyne),CFP,0.279 ± 0.001,62
+phosphine (FCP),,,
+Fluoromethylsilane,CH5FSi,1.700 ± 0.008,5
+1-Fluoro-4-nitrobenzene,C6H4FNO2,2.87 ± 0.06,1
+1-Fluoropropane (gauche),C3H7F,1.90 ± 0.10,1
+1-Fluoropropane (trans),C3H7F,2.05 ± 0.04,1
+2-Fluoropropane,C3H7F,1.958 ± 0.001,5
+cis-1-Fluoropropene,C3H5F,1.46 ± 0.03,1
+trans-1-Fluoropropene,C3H5F,≈1.9,1
+2-Fluoropropene,C3H5F,1.61 ± 0.03,1
+3-Fluoropropene (gauche),C3H5F,1.939 ± 0.015,1
+3-Fluoropropene (cis),C3H5F,1.765 ± 0.014,1
+3-Fluoropropyne,C3H3F,1.73 ± 0.02,5
+3-Fluoropyridine,C5H4FN,2.09 ± 0.26,3
+2-Fluorotoluene,C7H7F,1.37 ± 0.07,1
+3-Fluorotoluene,C7H7F,1.82 ± 0.04,2
+4-Fluorotoluene,C7H7F,2.00 ± 0.10,1
+Formaldehyde,CH2O,2.332 ± 0.002,3
+Formaldehyde dimer,C2H4O2,0.858 ± 0.005,57
+Formamide,CH3NO,3.73 ± 0.07,1
+Formic acid,CH2O2,1.425 ± 0.002,5
+Formyl fluoride,CHFO,2.081 ± 0.001,5
+Fulminic acid,CHNO,3.09934,5
+Fulvene,C6H6,0.4236 ± 0.013,2
+Furan,C4H4O,0.66 ± 0.01,1
+Furfural,C5H4O2,[3.54],7
+Furfuryl alcohol,C5H6O2,[1.92],7
+Glycerol,C3H8O3,[2.56],7
+Glycine (Conformer I),C2H5NO2,1.147 ± 0.005,49
+Glycine (Conformer II),C2H5NO2,5.45 ± 0.05,49
+Glycolaldehyde,C2H4O2,2.73 ± 0.05,2
+Glyoxal (cis),C2H2O2,4.8 ± 0.2,2
+2-Heptanol,C7H16O,[1.71],7
+3-Heptanol,C7H16O,[1.71],7
+2-Heptanone,C7H14O,[2.59],7
+3-Heptanone,C7H14O,[2.78],7
+Hexamethylphosphoric,C6H18N3OP,[5.5],7
+triamide,,,
+Hexanoic acid,C6H12O2,[1.13],7
+2-Hexanone,C6H12O,[2.66],7
+sec-Hexyl acetate,C8H16O2,[1.9],7
+1-Hexyne,C6H10,0.83 ± 0.05,1
+Hydrogen cyanide,CHN,2.985188,5
+Hydrogen cyanide trimer,C3H3N3,10.6,21
+Hydrogen isocyanide,CHN,3.05 ± 0.15,3
+p-Hydroquinone,C6H6O2,2.38 ± 0.05,15
+3-Hydroxypropanenitrile,C3H5NO,3.17 ± 0.02,5
+(gauche),,,
+Imidazole,C3H4N2,3.8 ± 0.4,2
+Iodoacetylene,C2HI,0.02525,5
+Iodobenzene,C6H5I,1.70 ± 0.09,1
+1-Iodobutane,C4H9I,[1.93],7
+2-Iodobutane,C4H9I,2.12 ± 0.11,1
+Iodoethane,C2H5I,1.976 ± 0.002,5
+Iodoethene,C2H3I,1.311 ± 0.005,5
+Iodomethane,CH3I,1.6406 ± 0.0004,5
+1-Iodo-2-methylpropane,C4H9I,[1.87],7
+Iodomethylsilane,CH5ISi,1.862 ± 0.005,5
+1-IoMdoolpercouplaarne,C3H7I,2.04 ± 0.10,1
+2-Iodopropane,C3H7I,[1.95],7
+Isobutanal (gauche),C4H8O,2.69 ± 0.01,5
+Isobutanal (trans),C4H8O,2.86 ± 0.01,5
+Isobutane,C4H10,0.132 ± 0.002,1
+Isobutene,C4H8,0.503 ± 0.010,1
+Isobutyl acetate,C6H12O2,[1.86],7
+Isobutylamine,C4H11N,[1.27],7
+Isobutyl formate,C5H10O2,[1.88],7
+Isobutyl isobutanoate,C8H16O2,[1.9],7
+Isocyanic acid (HNCO),CHNO,≈1.6,2
+Isocyanobenzene,C7H5N,4.018 ± 0.003,5
+Isocyanocyclopropane,C H N,4.03 ± 0.10,3
+2-Isocyanopropane,C4H7N,4.055 ± 0.001,5
+Isopentane,C5H12,0.13 ± 0.05,1
+Isopentyl acetate,C7H14O2,[1.86],7
+Isopropylamine,C3H9N,1.19 ± 0.06,3
+Isopropylbenzene,C9H12,≈0.79,1
+Isopropyl methyl ether,C4H10O,1.247 ± 0.003,5
+Isoquinoline,C9H7N,2.73 ± 0.14,1
+Isoxazole,C3H3NO,2.95 ± 0.04,3
+Isoxazole–carbon monoxide,C3H3NO•CO,2.873 ± 0.004,52
+complex,,,
+Ketene,C2H2O,1.42215,3
+Mesityl oxide,C6H10O,[2.79],7
+Methacrylic acid,C4H6O2,[1.65],7
+Methanethiol,CH4S,1.52 ± 0.08,1
+Methanol,CH4O,1.70 ± 0.02,1
+2-Methoxyethanol (gauche),C3H8O2,2.36 ± 0.05,2
+2-Methoxyethyl acetate,C5H10O3,[2.13],7
+"1-Methoxy-1,2-propadiene",C4H6O,0.963 ± 0.020,5
+N-Methylacetamide,C3H7NO,[4.3],7
+Methyl acetate,C3H6O2,1.72 ± 0.09,1
+Methyl acrylate,C4H6O2,[1.77],7
+2-Methylacrylonitrile,C4H5N,3.69 ± 0.18,1
+Methylamine,CH5N,1.31 ± 0.03,1
+2-Methylaniline,C7H9N,[1.60],7
+3-Methylaniline,C7H9N,[1.45],7
+4-Methylaniline,C7H9N,[1.52],7
+Methyl azide,CH3N3,2.17 ± 0.04,2
+Methyl benzoate,C8H8O2,[1.94],7
+"2-Methyl-1,3-butadiene",C5H8,0.25 ± 0.01,1
+3-Methylbutanoic acid,C5H10O2,[0.63],7
+2-Methyl-1-butanol,C5H12O,[1.88],7
+2-Methyl-2-butanol,C5H12O,[1.82],7
+3-Methyl-1-butene (gauche),C5H10,0.398 ± 0.004,3
+3-Methyl-1-butene (trans),C5H10,0.320 ± 0.010,3
+3-Methyl-2-butenenitrile,C5H7N,4.61 ± 0.13,10
+2-Methyl-1-buten-3-yne,C5H6,0.513 ± 0.02,2
+Methyl cyanate,C2H3NO,4.26 ± 0.18,5
+cis-3-Methylcyclohexanol,C7H14O,[1.91],7
+trans-3-Methylcyclohexanol,C7H14O,[1.75],7
+3-Methylcyclopentanone,C6H10O,3.14 ± 0.03,5
+3-Methyl-2-cyclopenten-1-,C6H8O,4.33 ± 0.002,5
+one,,,
+Methylcyclopropane,C4H8,0.139 ± 0.004,2
+Methyldiborane(6),CH8B2,0.566 ± 0.006,3
+Methyldifluorophosphine,CH3F2P,2.056 ± 0.006,3
+Methylenecyclohexane,C7H12,0.62 ± 0.01,5
+Methylenecyclopropene,C4H4,1.90 ± 0.01,5
+Methylenephosphine (CH2 =,CH3P,0.869 ± 0.003,61
+PH),,,
+N-Methylformamide,C2H5NO,3.83 ± 0.08,1
+Methyl formate,C2H4O2,1.77 ± 0.04,1
+2-Methylfuran,C5H6O,0.65 ± 0.05,2
+3-Methylfuran,C5H6O,1.03 ± 0.02,2
+5-Methyl-2(3H)-furanone,C5H6O2,4.08 ± 0.02,5
+Methyl hydroperoxide,CH4O2,≈0.65,13
+Methylidyne,CH,≈1.46,2
+Methyl isocyanate,C2H3NO,≈2.8,1
+Methyl isothiocyanate,C2H3NS,3.453 ± 0.003,5
+4-Methylisoxazole,C4H5NO,3.583 ± 0.005,5
+Methyl methacrylate,C5H8O2,[1.67],7
+2-Methyloxazole,C4H5NO,1.37 ± 0.07,5
+4-Methyloxazole,C4H5NO,1.08 ± 0.05,5
+5-Methyloxazole,C4H5NO,2.16 ± 0.04,5
+Methyloxirane,C3H6O,2.01 ± 0.02,1
+"2-Methyl-2,4-pentanediol",C6H14O2,[2.9],7
+4-Methylpentanenitrile,C6H11N,[3.5],7
+Methylphosphonic difluoride,CH3F2OP,3.69 ± 0.26,3
+N-Methylpropanamide,C4H9NO,3.61,7
+2-Methylpropanenitrile,C4H7N,4.29 ± 0.09,3
+2-Methyl-2-propanethiol,C4H10S,1.66 ± 0.03,3
+2-Methylpropanoic acid,C4H8O2,[1.08],7
+2-Methyl-1-propanol,C4H10O,1.64 ± 0.08,1
+2-Methyl-2-propanol,C4H10O,[1.66],7
+2-Methylpropenal,C4H6O,2.68 ± 0.13,1
+2-Methyl-2-propenol (skew),C4H8O,1.295 ± 0.022,5
+Methyl propyl ether (trans-,C4H10O,1.107 ± 0.013,3
+trans),,,
+2-Methylpyridine,C6H7N,1.85 ± 0.04,2
+3-Methylpyridine,C6H7N,[2.40],7
+4-Methylpyridine,C6H7N,2.70 ± 0.02,2
+2-Methylpyrimidine,C5H6N2,1.676 ± 0.010,3
+5-Methylpyrimidine,C5H6N2,2.881 ± 0.006,3
+N-Methylpyrrolidine,C5H11N,0.572 ± 0.003,5
+N-Methyl-2-pyrrolidinone,C5H9NO,[4.1],7
+Methyl salicylate,C8H8O3,[2.47],7
+Methylsilane,CH6Si,0.73456,5
+Methyl silyl ether,CH6OSi,1.15 ± 0.02,2
+3-Methylthietane,C4H8S,2.046 ± 0.009,5
+2-Methylthiophene,C5H6S,0.674 ± 0.005,2
+3-Methylthiophene,C5H6S,0.914 ± 0.015,3
+Methyl vinyl ether,C3H6O,0.965 ± 0.002,5
+Morpholine,C4H9NO,1.55 ± 0.03,3
+2-Nitroanisole,C7H7NO3,[5.0],7
+Nitrobenzene,C6H5NO2,4.22 ± 0.08,1
+Nitroethane,C2H5NO2,3.23 ± 0.03,2
+Nitromethane,CH3NO2,3.46 ± 0.02,1
+1-Nitropropane,C3H7NO2,3.66 ± 0.07,1
+2-Nitropropane,C3H7NO2,3.73 ± 0.07,1
+Nonanoic acid,C9H18O2,[0.79],7
+"2,5-Norbornadiene",C7H8,0.0587 ± 0.0001,5
+cis-9-Octadecenoic acid,C18H34O2,[1.18],7
+Octanoic acid,C8H16O2,[1.15],7
+1-Octanol,C8H18O,[1.76],7
+2-Octanol,C8H18O,[1.71],7
+2-Octanone,C8H16O,[2.70],7
+"1,4-Oxathiane",C4H8OS,0.295 ± 0.003,3
+Oxazole,C3H3NO,1.503 ± 0.030,3
+Oxetane,C3H6O,1.94 ± 0.01,1
+2-Oxetanone,C3H4O2,4.18 ± 0.03,1
+3-Oxetanone,C3H4O2,0.887 ± 0.005,2
+Oxirane,C2H4O,1.89 ± 0.01,1
+Pentachloroethane,C2HCl5,0.92 ± 0.05,1
+"cis-1,3-Pentadiene",C5H8,0.500 ± 0.015,2
+"trans-1,3-Pentadiene",C5H8,0.585 ± 0.010,2
+"1,3-Pentadiyne",C5H4,1.207 ± 0.001,5
+"1,5-Pentanediol",C5H12O2,[2.5],7
+"2,4-Pentanedione",C5H8O2,[2.78],7
+Pentanenitrile,C5H9N,4.12 ± 0.08,1
+Pentanoic acid,C5H10O2,[1.61],7
+1-Pentanol,C5H12O,[1.7],7
+2-Pentanol,C5H12O,[1.66],7
+3-Pentanol,C5H12O,[1.64],7
+2-Pentanone,C5H10O,[2.70],7
+3-Pentanone,C5H10O,[2.82],7
+"1,2,3-Pentatriene",C5H6,0.51 ± 0.05,11
+1-Pentene,C5H10,≈0.5,1
+1-Penten-3-yne,C5H6,0.66 ± 0.02,2
+cis-3-Penten-1-yne,C5H6,0.78 ± 0.02,2
+trans-3-Penten-1-yne,C5H6,1.06 ± 0.05,2
+Pentyl acetate,C7H14O2,1.75 ± 0.10,1
+Pentyl formate,C6H12O2,1.90 ± 0.10,1
+1-Pentyne (gauche),C5H8,0.769 ± 0.028,2
+1-Pentyne (trans),C5H8,0.842 ± 0.010,2
+Perfluoropyridine,C5F5N,0.98 ± 0.08,3
+Phenol,C6H6O,1.224 ± 0.008,3
+Phenylacetylene,C8H6,0.656 ± 0.005,3
+Phenylsilane,C6H8Si,0.845 ± 0.012,3
+1-Phosphapropyne (CH3CP),C2H3P,1.499 ± 0.001,63
+Piperidine (equitorial),C5H11N,0.82 ± 0.02,3
+Piperidine (axial),C5H11N,1.19 ± 0.02,3
+Piperidine (average),C5H11N,[1.19],3
+Propanal (gauche),C3H6O,2.86 ± 0.01,5
+Propanal (cis),C3H6O,2.52 ± 0.05,1
+Propanal (average),C3H6O,2.72,1
+Propane,C3H8,0.084 ± 0.001,1
+"1,2-Propanediol",C3H8O2,[2.25],7
+"1,3-Propanediol",C3H8O2,[2.55],7
+Propanenitrile,C3H5N,4.05 ± 0.03,3
+1-Propanethiol (gauche),C3H8S,1.683 ± 0.010,3
+1-Propanethiol (trans),C3H8S,1.60 ± 0.08,3
+2-Propanethiol (gauche),C3H8S,1.53 ± 0.03,3
+2-Propanethiol (trans),C3H8S,1.61 ± 0.03,3
+Propanoic acid (cis),C3H6O2,1.46 ± 0.07,2
+Propanoic acid (average),C3H6O2,1.75 ± 0.09,1
+1-Propanol (gauche),C3H8O,1.58 ± 0.03,2
+1-Propanol (trans),C3H8O,1.55 ± 0.03,2
+2-Propanol (trans),C3H8O,1.58 ± 0.03,2
+Propargyl alcohol,C3H4O,1.13 ± 0.06,2
+Propene,C3H6,0.366 ± 0.001,1
+Propene–sulfur dioxide,C3H6•O2S,1.34 ± 0.003,35
+complex,,,
+Propyl acetate,C5H10O2,[1.78],7
+Propylamine,C3H9N,1.17 ± 0.06,1
+Propylene carbonate,C4H6O3,[4.9],7
+Propyleneimine (cis),C3H7N,1.77 ± 0.09,2
+Propyleneimine (trans),C3H7N,1.57 ± 0.03,2
+Propyl formate,C4H8O2,[1.89],7
+2-Propynal,C3H2O,2.78 ± 0.02,5
+Propyne,C3H4,0.784 ± 0.001,3
+Propyne-argon complex,C3H4•Ar,0.730 ± 0.005,20
+4H-Pyran-4-one,C5H4O2,3.79 ± 0.02,5
+4H-Pyran-4-thione,C5H4OS,3.95 ± 0.05,5
+1H-Pyrazole,C3H4N2,2.20 ± 0.01,3
+Pyridazine,C4H4N2,4.22 ± 0.02,2
+Pyridine,C5H5N,2.215 ± 0.010,3
+2-Pyridinecarbonitrile,C6H4N2,5.78 ± 0.11,3
+3-Pyridinecarbonitrile,C6H4N2,3.66 ± 0.11,3
+4-Pyridinecarbonitrile,C6H4N2,1.96 ± 0.03,3
+3-Pyridinecarboxaldehyde,C6H5NO,1.44,3
+4-Pyridinecarboxaldehyde,C6H5NO,1.66,3
+2-Pyridinecarboxaldehyde,C6H5NO,3.56 ± 0.07,3
+Pyrimidine,C4H4N2,2.334 ± 0.010,2
+Pyrrole,C4H5N,1.767 ± 0.001,5
+Pyrrolidine,C4H9N,[1.57],7
+2-Pyrrolidone,C4H7NO,[3.5],7
+Quinoline,C9H7N,2.29 ± 0.11,1
+Salicylaldehyde,C7H6O2,[2.86],7
+Selenoformaldehyde,CH2Se,1.41 ± 0.01,5
+Silicon dicarbide,C2Si,2.393 ± 0.006,24
+Silicon methylidyne,CHSi,0.066 ± 0.002,41
+Styrene,C8H8,0.123 ± 0.003,5
+Succinonitrile,C4H4N2,[3.7],7
+Sulfolane,C4H8O2S,[4.8],7
+"1,1,2,2-Tetrabromoethane",C2H2Br4,[1.38],7
+"1,1,2,2-Tetrachloroethane",C2H2Cl4,1.32 ± 0.07,1
+"1,2,3,4-Tetrafluorobenzene",C6H2F4,2.42 ± 0.05,3
+"1,2,3,5-Tetrafluorobenzene",C6H2F4,1.46 ± 0.06,3
+"1,1,1,2-Tetrafluoroethane",C2H2F4,1.80 ± 0.22,5
+Tetrahydrofuran,C4H8O,1.75 ± 0.04,2
+Tetrahydrofurfuryl alcohol,C5H10O2,[2.1],7
+Tetrahydropyran (chair),C5H10O,1.58 ± 0.03,3
+Tetrahydro-4H-pyran-4-one,C5H8O2,1.720 ± 0.003,3
+"1,2,5,6-Tetrahydropyridine",C5H9N,1.007 ± 0.003,3
+Tetrahydrothiophene,C4H8S,[1.90],7
+Tetramethylurea,C5H12N2O,[3.5],7
+1H-Tetrazole,CH2N4,2.19 ± 0.05,3
+Thiacyclohexane,C5H10S,1.781 ± 0.010,3
+"1,2,5-Thiadiazole",C2H2N2S,1.579 ± 0.007,3
+Thietane,C3H6S,1.85 ± 0.09,1
+"Thietane 1,1-dioxide",C3H6O2S,4.8 ± 0.1,5
+ThiMoaocleetcauldlaerhyde,C2H4S,2.33 ± 0.02,68
+Thiocarbonyl fluoride,CF2S,0.08,59
+Thioformaldehyde,CH2S,1.6491 ± 0.0004,3
+Thiophene,C4H4S,0.55 ± 0.01,2
+2-Thiophenecarbonitrile,C5H3NS,4.59 ± 0.02,3
+3-Thiophenecarbonitrile,C5H3NS,4.13 ± 0.02,3
+4H-Thiopyran-4-thione,C5H4S2,3.9 ± 0.2,5
+Toluene,C7H8,0.375 ± 0.010,3
+Toluene-sulfur dioxide,C7H8•O2S,1.87 ± 0.03,34
+complex,,,
+"1H-1,2,4-Triazole",C2H3N3,2.7 ± 0.1,3
+Tribromomethane,CHBr3,0.99 ± 0.02,1
+Tributylamine,C12H27N,[0.78],7
+Tributyl borate,C12H27BO3,[0.77],7
+Tributyl phosphate,C12H27O4P,[3.07],7
+Tricarbon monosulfide,C3S,3.704 ± 0.009,50
+"1,1,1-Trichloroethane",C2H3Cl3,1.755 ± 0.015,2
+"1,1,2-Trichloroethane",C2H3Cl3,[1.4],7
+Trichloroethene,C2HCl3,[0.8],7
+Trichloroethylsilane,C2H5Cl3Si,[2.04],7
+Trichlorofluoromethane,CCl3F,0.46 ± 0.02,2
+Trichloromethane,CHCl3,1.04 ± 0.02,2
+(Trichloromethyl)benzene,C7H5Cl3,[2.03],7
+Trichloromethylsilane,CH3Cl3Si,1.91 ± 0.01,2
+Tri-o-cresyl phosphate,C21H21O4P,[2.87],7
+Tri-m-cresyl phosphate,C21H21O4P,[3.05],7
+Tri-p-cresyl phosphate,C21H21O4P,[3.18],7
+Triethanolamine,C6H15NO3,[3.57],7
+Triethylamine,C6H15N,0.66 ± 0.05,1
+Triethyl phosphate,C6H15O4P,[3.12],7
+Trifluoroacetic acid,C2HF3O2,2.28 ± 0.25,1
+Trifluoroacetonitrile,C2F3N,1.262 ± 0.010,3
+"1,2,4-Trifluorobenzene",C6H3F3,1.402 ± 0.009,5
+"1,1,1-Trifluoroethane",C2H3F3,2.347 ± 0.005,3
+Trifluoroethene,C2HF3,1.32 ± 0.03,2
+Trifluoroiodomethane,CF3I,1.048 ± 0.003,3
+Trifluoroisocyanomethane,C2F3N,1.153 ± 0.010,5
+Trifluoromethane,CHF3,1.6515,3
+(Trifluoromethyl)benzene,C7H5F3,2.86 ± 0.06,1
+Trifluoromethylsilane,CH3F3Si,2.3394 ± 0.0002,5
+(Trifluoromethyl)silane,CH3F3Si,2.32 ± 0.02,5
+"3,3,3-Trifluoropropene",C3H3F3,2.45 ± 0.05,1
+"3,3,3-Trifluoro-1-propyne",C3HF3,2.317 ± 0.013,5
+Trimethylamine,C3H9N,0.612 ± 0.003,1
+Trimethyl phosphate,C3H9O4P,[3.18],7
+"2,4,6-Trimethylpyridine",C8H11N,[2.05],7
+"1,3,5-Trioxane",C3H6O3,2.08 ± 0.02,1
+Vinyl acetate,C4H6O2,[1.79],7
+Vinyl formate,C3H4O2,1.49 ± 0.01,1
+2-Vinylfuran,C6H6O,0.69 ± 0.07,5
+Vinylsilane,C2H6Si,0.657 ± 0.002,5
+o-Xylene,C8H10,0.640 ± 0.005,2
+"2,4-Xylenol",C8H10O,[1.4],7
+"2,5-Xylenol",C8H10O,[1.45],7
+"2,6-Xylenol",C8H10O,[1.40],7
+"3,4-Xylenol",C8H10O,[1.56],7
+"3,5-Xylenol",C8H10O,[1.55],7
