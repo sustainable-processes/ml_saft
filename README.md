@@ -4,15 +4,9 @@ This project aims to build a method for predicting equation of state parameters 
 
 ## Research 
 
-The academic paper can be found [here](https://chemrxiv.org/engage/chemrxiv/article-details/6456371107c3f029374e6608).
+This work was published in the [Chemical Engineering Journal](https://doi.org/10.1016/j.cej.2024.151999)
 
-### Datasets
-
-We use the following to build a training dataset:
-
-* **[ThermoML Archive](https://trc.nist.gov/ThermoML/)**: A open-source dataset of 50k+ records from several thermodynamic journals spanning from 2003 to 2019. It contains pure component, binary and ternary mixtures.  
-
-* **[Dortmund Databank](http://dortmunddatabank.com/)**: A proprietary dataset that contains a mix of publicly available and proprietary data curated by experts. We have the [2021 VLE databank](http://www.ddbst.com/files/files/ddbsp/2021/Documentation/ReleaseNotes.pdf), which contains data for 41,400 mixtures.   PLEASE NOTE THAT DORTMUND DATABANK CAN ONLY BE USED IN THE COURSE OF THIS PROJECT AND MUST BE DELETED AT ITS TERMINATION.
+The preprint can be found [here](https://chemrxiv.org/engage/chemrxiv/article-details/6456371107c3f029374e6608).
 
 
 ## Getting started
@@ -117,7 +111,8 @@ Each of the above directories has two important configuration filees:
 
 ### Rough instructions to reproduce results from our paper
 
-1. Process the Dortmund data. This includes resolving SMILES strings, filtering data, and generating conformers.
+1. (Optional) Process the Dortmund data. This includes resolving SMILES strings, filtering data, and generating conformers.
+   Note, these pipelines will not work without manually downloading the data from Dortmund databank, which is commercial.
 
   ```bash
   kedro run --pipeline ddb
@@ -136,7 +131,7 @@ Each of the above directories has two important configuration filees:
   kedro run --pipeline train_spk_mu_model
   ```
 
-4. Fit PC-SAFT parameters
+4. (Optional) Fit PC-SAFT parameters - This requires the Dortmund databank since it uses the output from step 1. 
 
   ```bash
   # Regression on Dortmund data
@@ -150,7 +145,7 @@ Each of the above directories has two important configuration filees:
   kedro run --pipeline pcp_saft_cosmo_fitting_results_table
   ```
 
-5. Train models
+5. Train models - this can be run using the input files in `data/05_model_input`.
 
   ```bash
   # Preprocess data
